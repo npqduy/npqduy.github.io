@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Nguyen Phuoc Quy Duy | Assistant Professor, VinUniversity</title>
+    <meta name="description" content="Assistant Professor at VinUniversity | Leader of STEB-RG | 60+ Q1 papers | h-index 32">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --vin-blue: #003087;
+            --vin-gold: #fdb913;
+            --light: #f8fafc;
+            --dark: #0f172a;
+            --glass: rgba(255,255,255,0.94);
+        }
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body { font-family: 'Inter', sans-serif; background: var(--light); color: #1e293b; line-height: 1.8; }
+        h1, h2 { font-family: 'Playfair Display', serif; }
+
+        /* Navigation */
+        nav { position:fixed; top:0; width:100%; background:rgba(255,255,255,0.97); backdrop-filter:blur(15px); z-index:1000; padding:18px 0; box-shadow:0 4px 25px rgba(0,0,0,0.09); }
+        .nav-container { max-width:1350px; margin:0 auto; padding:0 40px; display:flex; justify-content:space-between; align-items:center; }
+        .nav-logo img { height:64px; }
+        .nav-menu { display:flex; gap:42px; }
+        .nav-menu a { text-decoration:none; color:var(--vin-blue); font-weight:600; font-size:1.05rem; position:relative; }
+        .nav-menu a::after { content:''; position:absolute; width:0; height:3px; background:var(--vin-gold); bottom:-8px; left:0; transition:0.4s; }
+        .nav-menu a:hover::after, .nav-menu a.active::after { width:100%; }
+
+        header { height:100vh; background:linear-gradient(135deg,rgba(0,48,135,0.93),rgba(0,94,184,0.88)), url('https://images.unsplash.com/photo-1497864149936-d3163f0c0f4b?q=80&w=2400') center/cover; color:white; display:flex; align-items:center; text-align:center; }
+        .hero-content h1 { font-size:5.4rem; margin-bottom:12px; }
+        .hero-content .title { font-size:2.1rem; margin-bottom:10px; }
+        .hero-content p { font-size:1.55rem; }
+
+        section { padding:140px 0 90px; }
+        .container { max-width:1150px; margin:0 auto; padding:0 40px; }
+        h2 { font-size:3.1rem; text-align:center; margin-bottom:85px; color:var(--vin-blue); position:relative; }
+        h2::after { content:''; width:120px; height:5px; background:var(--vin-gold); display:block; margin:22px auto; border-radius:4px; }
+
+        .glass-card { background:var(--glass); backdrop-filter:blur(22px); border-radius:26px; padding:52px; box-shadow:0 20px 50px rgba(0,0,0,0.09); border:1px solid rgba(0,48,135,0.1); }
+
+        .bio-text { font-size:1.15rem; text-align:justify; line-height:1.9; }
+        .bio-text p { margin-bottom:26px; }
+
+        .interests-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:34px; }
+        .interest-card { text-align:center; padding:42px 20px; background:white; border-radius:22px; box-shadow:0 12px 35px rgba(0,48,135,0.09); transition:0.4s; }
+        .interest-card:hover { transform:translateY(-16px); }
+        .interest-card i { font-size:3.9rem; color:var(--vin-blue); margin-bottom:22px; }
+
+        .timeline { position:relative; padding-left:40px; }
+        .timeline::before { content:''; position:absolute; left:13px; top:0; bottom:0; width:4px; background:var(--vin-gold); border-radius:2px; }
+        .timeline-item { position:relative; margin-bottom:48px; padding-left:52px; }
+        .timeline-item::before { content:''; position:absolute; left:0; top:9px; width:22px; height:22px; background:var(--vin-blue); border:5px solid white; border-radius:50%; box-shadow:0 0 0 5px var(--vin-gold); }
+        .timeline-year { font-weight:700; color:var(--vin-blue); font-size:1.12rem; margin-bottom:8px; }
+
+        /* Publications */
+        .pub-item { margin-bottom:38px; padding-bottom:32px; border-bottom:1px solid #e2e8f0; }
+        .pub-item:last-child { border:none; margin-bottom:0; padding-bottom:0; }
+        .pub-authors { font-weight:600; margin-bottom:4px; }
+        .pub-title { font-style:italic; color:var(--vin-blue); font-size:1.15rem; margin:8px 0 6px; line-height:1.5; }
+        .pub-journal { font-weight:600; color:#2d3748; }
+        .pub-details { font-size:0.98rem; color:#4a5568; margin-top:4px; }
+        .pub-doi { margin-top:8px; }
+        .pub-doi a { color:var(--vin-blue); text-decoration:none; border-bottom:1px dotted var(--vin-blue); font-weight:500; }
+
+        .cta { background:linear-gradient(135deg,var(--vin-blue),#005eb8); color:white; text-align:center; padding:140px 40px; border-radius:34px; margin:100px 40px; }
+        .btn { background:var(--vin-gold); color:var(--vin-blue); padding:20px 60px; border-radius:50px; font-weight:700; font-size:1.4rem; text-decoration:none; display:inline-block; margin-top:36px; box-shadow:0 12px 30px rgba(0,0,0,0.25); transition:0.3s; }
+        .btn:hover { transform:translateY(-6px); }
+
+        footer { background:var(--dark); color:#cbd5e1; text-align:center; padding:70px 20px; }
+
+        @media (max-width:768px) {
+            .nav-menu { gap:18px; font-size:0.92rem; }
+            .hero-content h1 { font-size:3.6rem; }
+            .pub-title { font-size:1.05rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="https://vinuni.edu.vn" target="_blank">
+                <img src="https://vinuni.edu.vn/wp-content/uploads/2023/11/VinUni-Logo-Color.png" alt="VinUniversity" class="nav-logo">
+            </a>
+            <div class="nav-menu">
+                <a href="#biography">Biography</a>
+                <a href="#research-interests">Research</a>
+                <a href="#research-experience">Experience</a>
+                <a href="#education">Education</a>
+                <a href="#awards">Awards</a>
+                <a href="#services">Services</a>
+                <a href="#publications">Publications</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header>
+        <div class="hero-content container" data-aos="fade-up">
+            <h1>Nguyen Phuoc Quy Duy, PhD</h1>
+            <p class="title">Assistant Professor</p>
+            <p>College of Engineering and Computer Science<br>VinUniversity, Vietnam</p>
+            <p style="margin-top:36px; font-size:1.55rem;">duy.npq@vinuni.edu.vn</p>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <!-- Biography -->
+        <section id="biography" data-aos="fade-up">
+            <h2>Biography</h2>
+            <div class="glass-card">
+                <div class="bio-text">
+                    <p>Dr. Nguyen Phuoc Quy Duy is currently an <strong>Assistant Professor</strong> at the College of Engineering and Computer Science, <strong>VinUniversity</strong>, Vietnam. He earned his Ph.D. from <strong>Monash University, Australia</strong> in 2018 and subsequently worked as a Postdoctoral Researcher at the <strong>Singapore – MIT Alliance for Research and Technology (SMART)</strong>.</p>
+                    <p>His research interests include sustainable mobility, traffic safety, travel behaviour, transport modelling, and transport economics. He has published <strong>over 60 papers in Q1 journals</strong> with an <strong>h-index of 32</strong>. He currently leads the <strong>Sustainable Travel and Economic Behaviour Research Group (STEB-RG)</strong> at the University of Danang and serves on the editorial boards of leading journals such as <em>Travel Behaviour and Society</em> (SSCI, Q1).</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Research Interests -->
+        <section id="research-interests" data-aos="fade-up">
+            <h2>Research Interests</h2>
+            <div class="interests-grid">
+                <div class="interest-card"><i class="fas fa-city"></i><h3>Smart City</h3></div>
+                <div class="interest-card"><i class="fas fa-leaf"></i><h3>Sustainable Mobility</h3></div>
+                <div class="interest-card"><i class="fas fa-route"></i><h3>Travel Behaviour</h3></div>
+                <div class="interest-card"><i class="fas fa-chart-line"></i><h3>Transport Economics</h3></div>
+                <div class="interest-card"><i class="fas fa-car-crash"></i><h3>Traffic Safety</h3></div>
+            </div>
+        </section>
+
+        <!-- Research Experience -->
+        <section id="research-experience" data-aos="fade-up">
+            <h2>Research Experience</h2>
+            <div class="glass-card">
+                <div class="timeline">
+                    <div class="timeline-item"><div class="timeline-year">2025 – Current</div><strong>Assistant Professor</strong> – VinUniversity, Vietnam</div>
+                    <div class="timeline-item"><div class="timeline-year">2021 – Current</div><strong>Leader</strong>, Sustainable Travel and Economic Behaviour Research Group (STEB-RG)<br>The University of Danang, Vietnam</div>
+                    <div class="timeline-item"><div class="timeline-year">2018 – 2020</div><strong>Postdoctoral Associate</strong><br>Project: Studying Autonomous Vehicles Policies with Urban Planning of Toa Payoh<br>Singapore – MIT Alliance for Research and Technology (SMART), Singapore</div>
+                    <div class="timeline-item"><div class="timeline-year">2018 – 2019</div><strong>Research Affiliate</strong><br>Project: Factors affecting the loyalty of ride-hailing passengers<br>Ton Duc Thang University, Ho Chi Minh City, Vietnam</div>
+                    <div class="timeline-item"><div class="timeline-year">2018</div><strong>Research Leader</strong><br>Projects: Assessing app-based taxi service & taxi driver behavior vs. accidents<br>The University of Danang – University of Science and Technology</div>
+                    <div class="timeline-item"><div class="timeline-year">2017</div><strong>Research Assistant</strong><br>Project: Sweating the Asset – Modelling and Analysis<br>Monash University, Australia</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education -->
+        <section id="education" data-aos="fade-up">
+            <h2>Education</h2>
+            <div class="glass-card">
+                <div class="timeline">
+                    <div class="timeline-item"><div class="timeline-year">2018</div><strong>Ph.D. in Transportation</strong><br>Monash University, Australia</div>
+                    <div class="timeline-item"><div class="timeline-year">2010</div><strong>M.E. in Civil and Environmental Engineering</strong><br>Myongji University, Korea</div>
+                    <div class="timeline-item"><div class="timeline-year">2005</div><strong>B.E. in Civil Engineering</strong><br>University of Danang, Vietnam</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Awards & Honors -->
+        <section id="awards" data-aos="fade-up">
+            <h2>Awards & Honors</h2>
+            <div class="glass-card">
+                <div class="timeline">
+                    <div class="timeline-item"><div class="timeline-year">2024</div><strong>Outstanding Research Performance Award</strong> – Danang Dept. of Science and Technology<br><strong>Winner</strong>, Outstanding Research Performance Award – The University of Danang</div>
+                    <div class="timeline-item"><div class="timeline-year">2023</div>Multiple awards including Outstanding Performance – University of Danang & Danang City</div>
+                    <div class="timeline-item"><div class="timeline-year">2022, 2021, 2019, 2018</div>Outstanding Research Excellence Awards – Danang City & University of Danang</div>
+                    <div class="timeline-item"><div class="timeline-year">2019</div><strong>SIDRA SOLUTIONS Award</strong><br>Most outstanding postgraduate student (Australia/New Zealand) – Plaque + AUD 2,500</div>
+                    <div class="timeline-item"><div class="timeline-year">2018</div>Runner-up, Outstanding Research Award – University of Danang – UST</div>
+                    <div class="timeline-item"><div class="timeline-year">2011, 2005, 2004</div>Student & Lecturer Research Awards – Vietnam Ministry of Education, VIFOTEC, University of Danang</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Academic Services -->
+        <section id="services" data-aos="fade-up">
+            <h2>Academic Services</h2>
+            <div class="glass-card">
+                <div style="font-size:1.12rem; line-height:2.2;">
+                    <p><strong>2024–Current</strong>: Editorial Board Member – <em>Travel Behaviour and Society</em> (SSCI, Q1)</p>
+                    <p><strong>2021–Current</strong>: Journal Associate Editor – <em>Frontiers in Future Transportation</em>, Transport Safety (ESCI)</p>
+                    <p><strong>2015–Current</strong>: Ad Hoc Reviewer for 15+ top journals including:</p>
+                    <ul style="padding-left:40px; columns:2; column-gap:40px;">
+                        <li>Transportation Research Part A, D, F</li>
+                        <li>Travel Behaviour and Society</li>
+                        <li>Accident Analysis & Prevention</li>
+                        <li>Safety Science</li>
+                        <li>Journal of Transport Geography</li>
+                        <li>Cities, Transportation, TRR</li>
+                    </ul>
+                    <p style="margin-top:20px;"><strong>Conference Reviewer</strong>: TRB, WCTR, ITS World Congress, ATRF, TISDC</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Selected Publications – HOÀN CHỈNH, ĐẸP NHẤT -->
+        <section id="publications" data-aos="fade-up">
+            <h2>Selected Publications</h2>
+            <div class="glass-card">
+
+                <div class="pub-item">
+                    <div class="pub-authors">Nguyen-Phuoc, D.Q.*, Nguyen, B.V., Vo, D.Q.N & Wong, Y.D.</div>
+                    <div class="pub-title">Riding safely with kids: Uncovering key factors driving parents’ safe riding intentions</div>
+                    <div class="pub-journal">Accident Analysis & Prevention (Q1, A*)</div>
+                    <div class="pub-details">Vol 221, 108209, 2025</div>
+                    <div class="pub-doi">DOI: <a href="https://doi.org/10.1016/j.aap.2025.108209" target="_blank">10.1016/j.aap.2025.108209</a></div>
+                </div>
+
+                <div class="pub-item">
+                    <div class="pub-authors">Nguyen-Phuoc, D.Q.*, Pham, S.T*, Nguyen, T.P.T., Su, D.N., Luu, T.T. & Oviedo-Trespalacios, O.</div>
+                    <div class="pub-title">Exploring the switch to urban train services: the impact of perceived accessibility and its moderating effects</div>
+                    <div class="pub-journal">Transportation Research Part A: Policy and Practice (Q1, A*)</div>
+                    <div class="pub-details">Vol 191, 104320, 2025</div>
+                    <div class="pub-doi">DOI: <a href="https://doi.org/10.1016/j.tra.2024.104320" target="_blank">10.1016/j.tra.2024.104320</a></div>
+                </div>
+
+                <div class="pub-item">
+                    <div class="pub-authors">Nguyen-Phuoc, D.Q.*, Mai, N.X. & Oviedo-Trespalacios, O.</div>
+                    <div class="pub-title">Not the Same: How Delivery, Ride-Hailing, and Private Riders’ Roles Influence Safety Behavior</div>
+                    <div class="pub-journal">Accident Analysis & Prevention (Q1, A*)</div>
+                    <div class="pub-details">Vol 208, 107762, 2024</div>
+                    <div class="pub-doi">DOI: <a href="https://doi.org/10.1016/j.aap.2024.107762" target="_blank">10.1016/j.aap.2024.107762</a></div>
+                </div>
+
+                <div class="pub-item">
+                    <div class="pub-authors">Nguyen-Phuoc, D.Q.*, Mai, N.X., Kim, I. & Oviedo-Trespalacios, O.</div>
+                    <div class="pub-title">Questioning Penalties and Road Safety Policies: Are They Enough to Deter Risky Two-Wheeler Behavior?</div>
+                    <div class="pub-journal">Accident Analysis & Prevention (Q1, A*)</div>
+                    <div class="pub-details">Vol 207, 107756, 2024</div>
+                    <div class="pub-doi">DOI: <a href="https://doi.org/10.1016/j.aap.2024.107756" target="_blank">10.1016/j.aap.2024.107756</a></div>
+                </div>
+
+                <div class="pub-item">
+                    <div class="pub-authors">Nguyen-Phuoc, D.Q., Zhou, M., Chua, M. H., Alho, A. R.*, Oh, S.*, Seshadri, R., Le, D. T.</div>
+                    <div class="pub-title">Examining the effects of Automated Mobility-on-Demand services on public transport systems using an agent-based simulation approach</div>
+                    <div class="pub-journal">Transportation Research Part A: Policy and Practice (Q1, A*)</div>
+                    <div class="pub-details">Vol 169, 103583, 2023</div>
+                    <div class="pub-doi">DOI: <a href="https://doi.org/10.1016/j.tra.2023.103583" target="_blank">10.1016/j.tra.2023.103583</a></div>
+                </div>
+
+                <div class="pub-item">
+                    <div class="pub-authors">Nguyen-Phuoc, D.Q.*, Ly, Su, D.N., Nguyen, H.H. & Oviedo-Trespalacios, O.</div>
+                    <div class="pub-title">Deadly meals: The influence of job-related factors on burnout and risky riding behaviours of food delivery motorcyclists</div>
+                    <div class="pub-journal">Safety Science (Q1, A)</div>
+                    <div class="pub-details">Vol 159, 106007, 2023</div>
+                    <div class="pub-doi">DOI: <a href="https://doi.org/10.1016/j.ssci.2022.106007" target="_blank">10.1016/j.ssci.2022.106007</a></div>
+                </div>
+
+                <div class="pub-item">
+                    <div class="pub-authors">Nguyen-Phuoc, D.Q.*, Nguyen, T.V., Su, D.N., Le, P. T. & Oviedo-Trespalacios, O.</div>
+                    <div class="pub-title">How social cues about other passengers affect word-of-mouth and intention to continue using bus services? A second-order SEM approach</div>
+                    <div class="pub-journal">Transportation Research Part A: Policy and Practice (Q1, A*)</div>
+                    <div class="pub-details">Vol 158, pp. 302–320, 2022</div>
+                    <div class="pub-doi">DOI: <a href="https://doi.org/10.1016/j.tra.2022.02.009" target="_blank">10.1016/j.tra.2022.02.009</a></div>
+                </div>
+
+                <div class="pub-item">
+                    <div class="pub-authors">Nguyen-Phuoc, D.Q.*, Su, D.N., Vo, N.S., Nguyen, H.H. & Oviedo-Trespalacios, O.</div>
+                    <div class="pub-title">Factors affecting intention to use on-demand shared ride-hailing services in Vietnam: Risk, cost or sustainability?</div>
+                    <div class="pub-journal">Journal of Transport Geography (Q1, A)</div>
+                    <div class="pub-details">Vol 99, 103302, 2022</div>
+                    <div class="pub-doi">DOI: <a href="https://doi.org/10.1016/j.jtrangeo.2022.103302" target="_blank">10.1016/j.jtrangeo.2022.103302</a></div>
+                </div>
+
+                <div class="pub-item">
+                    <div class="pub-authors">Nguyen-Phuoc, D.Q.*, Oviedo-Trespalacios, O., Vo, N.S., Le, P. T. & Nguyen, T. V.</div>
+                    <div class="pub-title">How does perceived risk affect passenger satisfaction and loyalty towards ride sourcing services?</div>
+                    <div class="pub-journal">Transportation Research Part D: Transport and Environment (Q1, A)</div>
+                    <div class="pub-details">Vol 97, 102921, 2021</div>
+                    <div class="pub-doi">DOI: <a href="https://doi.org/10.1016/j.trd.2021.102921" target="_blank">10.1016/j.trd.2021.102921</a></div>
+                </div>
+
+                <div class="pub-item">
+                    <div class="pub-authors">Nguyen-Phuoc, D.Q.*, Tran, A.T.P., Nguyen, T.V., Le, P.T. & Su, D.N.</div>
+                    <div class="pub-title">Investigating the complexity of perceived service quality and perceived safety and security in building loyalty among bus passengers in Vietnam – A PLS-SEM approach</div>
+                    <div class="pub-journal">Transport Policy (Q1, A)</div>
+                    <div class="pub-details">Vol 101, pp. 162–173, 2021</div>
+                    <div class="pub-doi">DOI: <a href="https://doi.org/10.1016/j.tranpol.2020.12.010" target="_blank">10.1016/j.tranpol.2020.12.010</a></div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="cta" data-aos="fade-up">
+            <h2>Let's Collaborate</h2>
+            <p style="font-size:1.5rem; max-width:900px; margin:36px auto;">
+                Research collaboration • PhD co-supervision • Grant applications • Industry consulting
+            </p>
+            <a href="mailto:duy.npq@vinuni.edu.vn" class="btn">Contact Me</a>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>© 2025 Dr. Nguyen Phuoc Quy Duy • Assistant Professor, VinUniversity • All rights reserved.</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({duration:1000,once:true});
+        window.addEventListener('scroll',()=>{let c='';document.querySelectorAll('section[id]').forEach(s=>{if(scrollY>=s.offsetTop-160)c=s.id;});document.querySelectorAll('.nav-menu a').forEach(a=>{a.classList.remove('active');if(a.getAttribute('href')===`#${c}`)a.classList.add('active');});});
+    </script>
+</body>
+</html>
