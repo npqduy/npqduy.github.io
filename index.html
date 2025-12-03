@@ -1,326 +1,1395 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. Nguyen Phuoc Quy Duy | Associate Professor, VinUniversity</title>
-    <meta name="description" content="Associate Professor at VinUniversity | Leader of STEB-RG | 60+ Q1 papers | h-index 32">
-    
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
-    <style>
-        :root {
-            --vin-blue: #003087;
-            --vin-gold: #fdb913;
-            --light: #f8fafc;
-            --dark: #0f172a;
-            --glass: rgba(255,255,255,0.94);
-        }
-        * { margin:0; padding:0; box-sizing:border-box; }
-        body { font-family: 'Inter', sans-serif; background: var(--light); color: #1e293b; line-height: 1.8; }
-        h1, h2 { font-family: 'Playfair Display', serif; }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dr. Nguyen Phuoc Quy Duy | Associate Professor, VinUniversity</title>
+  <meta name="description" content="Associate Professor at VinUniversity | Leader of STEB-RG | 60+ Q1 papers | h-index 34">
 
-        /* Navigation */
-        nav { position:fixed; top:0; width:100%; background:rgba(255,255,255,0.97); backdrop-filter:blur(15px); z-index:1000; padding:18px 0; box-shadow:0 4px 25px rgba(0,0,0,0.09); }
-        .nav-container { max-width:1350px; margin:0 auto; padding:0 40px; display:flex; justify-content:space-between; align-items:center; }
-        .nav-logo img { height:64px; }
-        .nav-menu { display:flex; gap:42px; }
-        .nav-menu a { text-decoration:none; color:var(--vin-blue); font-weight:600; font-size:1.05rem; position:relative; }
-        .nav-menu a::after { content:''; position:absolute; width:0; height:3px; background:var(--vin-gold); bottom:-8px; left:0; transition:0.4s; }
-        .nav-menu a:hover::after, .nav-menu a.active::after { width:100%; }
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-        header { height:100vh; background:linear-gradient(135deg,rgba(0,48,135,0.93),rgba(0,94,184,0.88)), url('https://images.unsplash.com/photo-1497864149936-d3163f0c0f4b?q=80&w=2400') center/cover; color:white; display:flex; align-items:center; text-align:center; }
-        .hero-content h1 { font-size:5.4rem; margin-bottom:12px; }
-        .hero-content .title { font-size:2.1rem; margin-bottom:10px; }
-        .hero-content p { font-size:1.55rem; }
+  <style>
+    :root {
+      --vin-blue: #003087;
+      --vin-blue-soft: #0b3f9c;
+      --vin-gold: #fdb913;
+      --light: #f8fafc;
+      --dark: #0f172a;
+      --glass: rgba(255, 255, 255, 0.96);
+      --muted: #64748b;
+      --accent-orange: #ea580c;
+    }
 
-        section { padding:140px 0 90px; }
-        .container { max-width:1150px; margin:0 auto; padding:0 40px; }
-        h2 { font-size:3.1rem; text-align:center; margin-bottom:85px; color:var(--vin-blue); position:relative; }
-        h2::after { content:''; width:120px; height:5px; background:var(--vin-gold); display:block; margin:22px auto; border-radius:4px; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        .glass-card { background:var(--glass); backdrop-filter:blur(22px); border-radius:26px; padding:52px; box-shadow:0 20px 50px rgba(0,0,0,0.09); border:1px solid rgba(0,48,135,0.1); }
+    html {
+      scroll-behavior: smooth;
+    }
 
-        .bio-text { font-size:1.15rem; text-align:justify; line-height:1.9; }
-        .bio-text p { margin-bottom:26px; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--light);
+      color: #0f172a;
+      line-height: 1.8;
+      font-size: 16px;
+    }
 
-        .interests-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:34px; }
-        .interest-card { text-align:center; padding:42px 20px; background:white; border-radius:22px; box-shadow:0 12px 35px rgba(0,48,135,0.09); transition:0.4s; }
-        .interest-card:hover { transform:translateY(-16px); }
-        .interest-card i { font-size:3.9rem; color:var(--vin-blue); margin-bottom:22px; }
+    h1, h2 {
+      font-family: 'Playfair Display', serif;
+    }
 
-        .timeline { position:relative; padding-left:40px; }
-        .timeline::before { content:''; position:absolute; left:13px; top:0; bottom:0; width:4px; background:var(--vin-gold); border-radius:2px; }
-        .timeline-item { position:relative; margin-bottom:48px; padding-left:52px; }
-        .timeline-item::before { content:''; position:absolute; left:0; top:9px; width:22px; height:22px; background:var(--vin-blue); border:5px solid white; border-radius:50%; box-shadow:0 0 0 5px var(--vin-gold); }
-        .timeline-year { font-weight:700; color:var(--vin-blue); font-size:1.12rem; margin-bottom:8px; }
+    a {
+      color: var(--vin-blue-soft);
+    }
 
-        /* Publications */
-        .pub-item { margin-bottom:38px; padding-bottom:32px; border-bottom:1px solid #e2e8f0; }
-        .pub-item:last-child { border:none; margin-bottom:0; padding-bottom:0; }
-        .pub-authors { font-weight:600; margin-bottom:4px; }
-        .pub-title { font-style:italic; color:var(--vin-blue); font-size:1.15rem; margin:8px 0 6px; line-height:1.5; }
-        .pub-journal { font-weight:600; color:#2d3748; }
-        .pub-details { font-size:0.98rem; color:#4a5568; margin-top:4px; }
-        .pub-doi { margin-top:8px; }
-        .pub-doi a { color:var(--vin-blue); text-decoration:none; border-bottom:1px dotted var(--vin-blue); font-weight:500; }
+    .institution {
+      font-weight: 600;
+      font-style: italic;
+      color: var(--vin-blue-soft);
+    }
 
-        .cta { background:linear-gradient(135deg,var(--vin-blue),#005eb8); color:white; text-align:center; padding:140px 40px; border-radius:34px; margin:100px 40px; }
-        .btn { background:var(--vin-gold); color:var(--vin-blue); padding:20px 60px; border-radius:50px; font-weight:700; font-size:1.4rem; text-decoration:none; display:inline-block; margin-top:36px; box-shadow:0 12px 30px rgba(0,0,0,0.25); transition:0.3s; }
-        .btn:hover { transform:translateY(-6px); }
+    /* Navigation */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.97);
+      backdrop-filter: blur(18px);
+      z-index: 1000;
+      padding: 14px 0;
+      box-shadow: 0 4px 20px rgba(15, 23, 42, 0.08);
+    }
 
-        footer { background:var(--dark); color:#cbd5e1; text-align:center; padding:70px 20px; }
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+    }
 
-        @media (max-width:768px) {
-            .nav-menu { gap:18px; font-size:0.92rem; }
-            .hero-content h1 { font-size:3.6rem; }
-            .pub-title { font-size:1.05rem; }
-        }
-    </style>
+    .nav-brand img {
+      height: 60px;
+      width: auto;
+      display: block;
+    }
+
+    .nav-menu {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: flex-end;
+    }
+
+    .nav-menu a {
+      text-decoration: none;
+      color: var(--vin-blue);
+      font-weight: 600;
+      font-size: 0.9rem;
+      position: relative;
+      letter-spacing: 0.02em;
+      text-transform: none;
+    }
+
+    .nav-menu a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background: var(--vin-gold);
+      bottom: -6px;
+      left: 0;
+      transition: 0.3s;
+      border-radius: 999px;
+    }
+
+    .nav-menu a:hover::after,
+    .nav-menu a.active::after {
+      width: 100%;
+    }
+
+    /* Layout */
+    header {
+      background:
+        linear-gradient(135deg, rgba(0, 48, 135, 0.93), rgba(0, 94, 184, 0.88)),
+        url('https://images.unsplash.com/photo-1497864149936-d3163f0c0f4b?q=80&w=2400') center/cover;
+      color: white;
+      padding: 120px 0 80px;
+    }
+
+    .hero-wrapper {
+      width: 100%;
+    }
+
+    .container {
+      max-width: 1150px;
+      margin: 0 auto;
+      padding: 0 28px;
+    }
+
+    .hero-content {
+      max-width: 780px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .hero-content h1 {
+      font-size: 4rem;
+      margin-bottom: 10px;
+      line-height: 1.05;
+    }
+
+    .hero-content .title {
+      font-size: 1.5rem;
+      margin-bottom: 6px;
+      font-weight: 500;
+    }
+
+    .hero-content p {
+      font-size: 1.02rem;
+    }
+
+    .hero-meta {
+      margin-top: 18px;
+      font-size: 0.98rem;
+      color: #e5e7eb;
+    }
+
+    .hero-email {
+      margin-top: 20px;
+      font-size: 1.1rem;
+      font-weight: 500;
+    }
+
+    section {
+      padding: 80px 0 64px;
+    }
+
+    h2.section-title {
+      font-size: 2.3rem;
+      text-align: center;
+      margin-bottom: 48px;
+      color: var(--vin-blue);
+      position: relative;
+      letter-spacing: 0.04em;
+      text-transform: none;
+    }
+
+    h2.section-title::after {
+      content: '';
+      width: 90px;
+      height: 4px;
+      background: var(--vin-gold);
+      display: block;
+      margin: 18px auto 0;
+      border-radius: 4px;
+    }
+
+    .section-intro {
+      max-width: 760px;
+      margin: 0 auto 30px;
+      text-align: center;
+      font-size: 0.98rem;
+      color: var(--muted);
+    }
+
+    .glass-card {
+      background: var(--glass);
+      backdrop-filter: blur(22px);
+      border-radius: 24px;
+      padding: 32px 32px 30px;
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+      border: 1px solid rgba(15, 23, 42, 0.06);
+    }
+
+    .glass-card + .glass-card {
+      margin-top: 24px;
+    }
+
+    .subheading {
+      font-size: 0.95rem;
+      letter-spacing: 0.14em;
+      color: var(--muted);
+      font-weight: 600;
+      margin-bottom: 14px;
+      text-transform: uppercase;
+    }
+
+    /* Biography */
+    .bio-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr) minmax(0, 2fr);
+      gap: 24px;
+      align-items: center;
+    }
+
+    .bio-photo {
+      display: flex;
+      justify-content: center;
+    }
+
+    .bio-photo img {
+      width: 100%;
+      max-width: 380px;
+      aspect-ratio: 4 / 3;
+      height: auto;
+      border-radius: 18px;
+      object-fit: cover;
+      box-shadow: 0 16px 40px rgba(15, 23, 42, 0.25);
+    }
+
+    .bio-text {
+      font-size: 1rem;
+      text-align: justify;
+      line-height: 1.9;
+    }
+
+    .bio-text p + p {
+      margin-top: 16px;
+    }
+
+    /* Research interests */
+    .interests-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .interest-card {
+      text-align: center;
+      padding: 22px 14px 20px;
+      background: #ffffff;
+      border-radius: 18px;
+      box-shadow: 0 12px 28px rgba(15, 23, 42, 0.06);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .interest-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 18px 36px rgba(15, 23, 42, 0.12);
+    }
+
+    .interest-card i {
+      font-size: 2rem;
+      color: var(--vin-blue-soft);
+      margin-bottom: 10px;
+    }
+
+    .interest-card h3 {
+      font-size: 1.02rem;
+      font-weight: 600;
+      color: var(--dark);
+    }
+
+    /* Timelines */
+    .timeline {
+      position: relative;
+      padding-left: 32px;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 10px;
+      top: 0;
+      bottom: 0;
+      width: 3px;
+      background: linear-gradient(to bottom, var(--vin-gold), rgba(253, 185, 19, 0.1));
+      border-radius: 999px;
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 22px;
+    }
+
+    .timeline-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .timeline-marker {
+      position: absolute;
+      left: -2px;
+      top: 6px;
+      width: 16px;
+      height: 16px;
+      background: var(--vin-blue);
+      border: 3px solid #ffffff;
+      border-radius: 50%;
+      box-shadow: 0 0 0 4px rgba(253, 185, 19, 0.4);
+    }
+
+    .timeline-year {
+      font-weight: 700;
+      color: var(--vin-blue-soft);
+      font-size: 0.96rem;
+      margin-bottom: 4px;
+      text-transform: none;
+      letter-spacing: 0.08em;
+    }
+
+    .timeline-content {
+      padding-left: 30px;
+      font-size: 0.97rem;
+    }
+
+    .timeline-content p {
+      margin-bottom: 4px;
+    }
+
+    .timeline-content p:last-child {
+      margin-bottom: 0;
+    }
+
+    .timeline-content ul {
+      margin: 4px 0 6px 18px;
+      padding-left: 0;
+    }
+
+    .timeline-content li {
+      margin-bottom: 3px;
+    }
+
+    /* Publications */
+    .pub-intro {
+      font-size: 0.98rem;
+      margin-bottom: 12px;
+    }
+
+    .pub-metrics {
+      margin-top: 10px;
+      font-size: 0.96rem;
+    }
+
+    .pub-metrics ul {
+      margin: 8px 0 4px 18px;
+    }
+
+    .pub-metrics li {
+      margin-bottom: 4px;
+    }
+
+    .pub-list {
+      margin-top: 26px;
+    }
+
+    .pub-item {
+      margin-bottom: 20px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    .pub-item:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .pub-authors {
+      font-weight: 600;
+      margin-bottom: 2px;
+      font-size: 0.96rem;
+    }
+
+    .pub-title {
+      font-style: italic;
+      color: var(--vin-blue-soft);
+      font-size: 1rem;
+      margin: 4px 0;
+      line-height: 1.5;
+    }
+
+    .pub-journal {
+      font-weight: 600;
+      color: #1e293b;
+      font-size: 0.94rem;
+    }
+
+    .pub-details {
+      font-size: 0.9rem;
+      color: #4b5563;
+      margin-top: 2px;
+    }
+
+    .pub-note {
+      font-size: 0.9rem;
+      font-weight: 600;
+      font-style: italic;
+      color: var(--accent-orange);
+      margin-top: 4px;
+    }
+
+    .pub-doi {
+      margin-top: 4px;
+      font-size: 0.9rem;
+    }
+
+    .pub-doi a {
+      color: var(--vin-blue-soft);
+      text-decoration: none;
+      border-bottom: 1px dotted var(--vin-blue-soft);
+      font-weight: 500;
+    }
+
+    .pub-doi a:hover {
+      border-bottom-style: solid;
+    }
+
+    /* Skill bars */
+    .skill-group {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+    }
+
+    .skill-label {
+      font-size: 0.95rem;
+      margin-bottom: 0;
+      flex: 1 1 auto;
+    }
+
+    .skill-bar {
+      height: 8px;
+      border-radius: 999px;
+      background: #e2e8f0;
+      overflow: hidden;
+      flex: 0 0 180px;
+      max-width: 200px;
+    }
+
+    .skill-bar-fill {
+      height: 100%;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--vin-blue), var(--vin-gold));
+    }
+
+    /* CTA Contact */
+    .cta {
+      background: linear-gradient(135deg, var(--vin-blue), #005eb8);
+      color: white;
+      text-align: center;
+      padding: 70px 24px 76px;
+      border-radius: 28px;
+      margin: 40px 0 0;
+    }
+
+    .cta h2.section-title {
+      color: #ffffff;
+      margin-bottom: 22px;
+      font-size: 2rem;
+    }
+
+    .cta h2.section-title::after {
+      background: rgba(253, 185, 19, 0.9);
+    }
+
+    .cta p {
+      font-size: 1.02rem;
+      max-width: 850px;
+      margin: 0 auto 22px;
+    }
+
+    .btn {
+      background: var(--vin-gold);
+      color: var(--vin-blue);
+      padding: 14px 40px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 1rem;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 4px;
+      box-shadow: 0 10px 26px rgba(15, 23, 42, 0.35);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 16px 34px rgba(15, 23, 42, 0.45);
+    }
+
+    footer {
+      background: var(--dark);
+      color: #cbd5e1;
+      text-align: center;
+      padding: 32px 16px;
+      font-size: 0.88rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .nav-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+
+      .nav-menu {
+        justify-content: flex-start;
+        gap: 12px;
+      }
+
+      header {
+        padding: 110px 0 60px;
+      }
+
+      .hero-content h1 {
+        font-size: 2.7rem;
+      }
+
+      .hero-content .title {
+        font-size: 1.25rem;
+      }
+
+      .hero-content p {
+        font-size: 0.98rem;
+      }
+
+      section {
+        padding: 72px 0 56px;
+      }
+
+      h2.section-title {
+        font-size: 1.8rem;
+        margin-bottom: 40px;
+      }
+
+      .bio-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .bio-photo {
+        max-width: 420px;
+        margin: 0 auto 8px;
+      }
+
+      .interests-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 600px) {
+      .nav-menu {
+        gap: 8px;
+      }
+
+      .nav-menu a {
+        font-size: 0.8rem;
+      }
+
+      .glass-card {
+        padding: 24px 20px 22px;
+      }
+
+      .timeline-content {
+        padding-left: 24px;
+      }
+
+      .interests-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .skill-group {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .skill-bar {
+        flex: 0 0 auto;
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+
+    @media (min-width: 900px) {
+      .hero-content h1 {
+        white-space: nowrap;
+      }
+    }
+  </style>
 </head>
 <body>
-
-    <!-- Navigation -->
-    <nav id="navbar">
-        <div class="nav-container">
-            <a href="https://vinuni.edu.vn" target="_blank">
-                <img src="https://npqduy.github.io/Trường_Đại_học_VinUni_logo.png" 
-                    style="
-                            width: 95px;
-                            margin-right: 20px;
-                        "
-                    alt="VinUniversity" class="nav-logo">
-            </a>
-            <div class="nav-menu">
-                <a href="#biography">Biography</a>
-                <a href="#research-interests">Research</a>
-                <a href="#research-experience">Experience</a>
-                <a href="#education">Education</a>
-                <a href="#awards">Awards</a>
-                <a href="#services">Services</a>
-                <a href="#publications">Publications</a>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Hero -->
-    <header>
-        <div class="hero-content container" data-aos="fade-up" style="
-    padding-top: 57px;
-">
-            <h1>Nguyen Phuoc Quy Duy, PhD</h1>
-            <p class="title">Associate Professor</p>
-            <p>College of Engineering and Computer Science<br>VinUniversity, Vietnam</p>
-            <p style="margin-top:36px; font-size:1.55rem;">duy.npq@vinuni.edu.vn</p>
-        </div>
-    </header>
-
-    <div class="container">
-
-        <!-- Biography -->
-        <section id="biography" data-aos="fade-up">
-            <h2>Biography</h2>
-            <div class="glass-card">
-                <div class="bio-text">
-                    <p>Dr. Nguyen Phuoc Quy Duy is currently an <strong>Associate Professor</strong> at the College of Engineering and Computer Science, <strong>VinUniversity</strong>, Vietnam. He earned his Ph.D. from <strong>Monash University, Australia</strong> in 2018 and subsequently worked as a Postdoctoral Researcher at the <strong>Singapore – MIT Alliance for Research and Technology (SMART)</strong>.</p>
-                    <p>His research interests include sustainable mobility, traffic safety, travel behaviour, transport modelling, and transport economics. He has published <strong>over 60 papers in Q1 journals</strong> with an <strong>h-index of 32</strong>. He currently leads the <strong>Sustainable Travel and Economic Behaviour Research Group (STEB-RG)</strong> at the University of Danang and serves on the editorial boards of leading journals such as <em>Travel Behaviour and Society</em> (SSCI, Q1).</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Research Interests -->
-        <section id="research-interests" data-aos="fade-up">
-            <h2>Research Interests</h2>
-            <div class="interests-grid">
-                <div class="interest-card"><i class="fas fa-city"></i><h3>Smart City</h3></div>
-                <div class="interest-card"><i class="fas fa-leaf"></i><h3>Sustainable Mobility</h3></div>
-                <div class="interest-card"><i class="fas fa-route"></i><h3>Travel Behaviour</h3></div>
-                <div class="interest-card"><i class="fas fa-chart-line"></i><h3>Transport Economics</h3></div>
-                <div class="interest-card"><i class="fas fa-car-crash"></i><h3>Traffic Safety</h3></div>
-            </div>
-        </section>
-
-        <!-- Research Experience -->
-        <section id="research-experience" data-aos="fade-up">
-            <h2>Research Experience</h2>
-            <div class="glass-card">
-                <div class="timeline">
-                    <div class="timeline-item"><div class="timeline-year">2025 – Current</div><strong>Associate Professor</strong> – VinUniversity, Vietnam</div>
-                    <div class="timeline-item"><div class="timeline-year">2021 – Current</div><strong>Leader</strong>, Sustainable Travel and Economic Behaviour Research Group (STEB-RG)<br>The University of Danang, Vietnam</div>
-                    <div class="timeline-item"><div class="timeline-year">2018 – 2020</div><strong>Postdoctoral Associate</strong><br>Project: Studying Autonomous Vehicles Policies with Urban Planning of Toa Payoh<br>Singapore – MIT Alliance for Research and Technology (SMART), Singapore</div>
-                    <div class="timeline-item"><div class="timeline-year">2018 – 2019</div><strong>Research Affiliate</strong><br>Project: Factors affecting the loyalty of ride-hailing passengers<br>Ton Duc Thang University, Ho Chi Minh City, Vietnam</div>
-                    <div class="timeline-item"><div class="timeline-year">2018</div><strong>Research Leader</strong><br>Projects: Assessing app-based taxi service & taxi driver behavior vs. accidents<br>The University of Danang – University of Science and Technology</div>
-                    <div class="timeline-item"><div class="timeline-year">2017</div><strong>Research Assistant</strong><br>Project: Sweating the Asset – Modelling and Analysis<br>Monash University, Australia</div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Education -->
-        <section id="education" data-aos="fade-up">
-            <h2>Education</h2>
-            <div class="glass-card">
-                <div class="timeline">
-                    <div class="timeline-item"><div class="timeline-year">2018</div><strong>Ph.D. in Transportation</strong><br>Monash University, Australia</div>
-                    <div class="timeline-item"><div class="timeline-year">2010</div><strong>M.E. in Civil and Environmental Engineering</strong><br>Myongji University, Korea</div>
-                    <div class="timeline-item"><div class="timeline-year">2005</div><strong>B.E. in Civil Engineering</strong><br>University of Danang, Vietnam</div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Awards & Honors -->
-        <section id="awards" data-aos="fade-up">
-            <h2>Awards & Honors</h2>
-            <div class="glass-card">
-                <div class="timeline">
-                    <div class="timeline-item"><div class="timeline-year">2024</div><strong>Outstanding Research Performance Award</strong> – Danang Dept. of Science and Technology<br><strong>Winner</strong>, Outstanding Research Performance Award – The University of Danang</div>
-                    <div class="timeline-item"><div class="timeline-year">2023</div>Multiple awards including Outstanding Performance – University of Danang & Danang Department of Science and Technology</div>
-                    <div class="timeline-item"><div class="timeline-year">2022, 2021, 2019, 2018</div>Outstanding Research Excellence Awards – Danang Department of Science and Technology & University of Danang</div>
-                    <div class="timeline-item"><div class="timeline-year">2019</div><strong>SIDRA SOLUTIONS Award</strong><br>Most outstanding postgraduate student (Australia/New Zealand) – Plaque + AUD 2,500</div>
-                    <div class="timeline-item"><div class="timeline-year">2018</div>Runner-up, Outstanding Research Award – University of Danang & Danang Department of Science and Technology</div>
-                    <div class="timeline-item"><div class="timeline-year">2011, 2005, 2004</div>Student & Lecturer Research Awards – Vietnam Ministry of Education, VIFOTEC, University of Danang</div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Academic Services -->
-        <section id="services" data-aos="fade-up">
-            <h2>Academic Services</h2>
-            <div class="glass-card">
-                <div style="font-size:1.12rem; line-height:2.2;">
-                    <p><strong>2024–Current</strong>: Editorial Board Member – <em>Travel Behaviour and Society</em> (SSCI, Q1)</p>
-                    <p><strong>2021–Current</strong>: Journal Associate Editor – <em>Frontiers in Future Transportation</em>, Transport Safety (ESCI)</p>
-                    <p><strong>2015–Current</strong>: Ad Hoc Reviewer for 15+ top journals including:</p>
-                    <ul style="padding-left:40px; columns:2; column-gap:40px;">
-                        <li>Transportation Research Part A, D, F</li>
-                        <li>Travel Behaviour and Society</li>
-                        <li>Accident Analysis & Prevention</li>
-                        <li>Safety Science</li>
-                        <li>Journal of Transport Geography</li>
-                        <li>Cities, Transportation, TRR</li>
-                    </ul>
-                    <p style="margin-top:20px;"><strong>Conference Reviewer</strong>: TRB, WCTR, ITS World Congress, ATRF, TISDC</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Selected Publications – HOÀN CHỈNH, ĐẸP NHẤT -->
-        <section id="publications" data-aos="fade-up">
-            <h2>Selected Publications</h2>
-            <div class="glass-card">
-
-                <div class="pub-item">
-                    <div class="pub-authors">Nguyen-Phuoc, D.Q.*, Nguyen, B.V., Vo, D.Q.N & Wong, Y.D.</div>
-                    <div class="pub-title">Riding safely with kids: Uncovering key factors driving parents’ safe riding intentions</div>
-                    <div class="pub-journal">Accident Analysis & Prevention (Q1, A*)</div>
-                    <div class="pub-details">Vol 221, 108209, 2025</div>
-                    <div class="pub-doi">DOI: <a href="https://doi.org/10.1016/j.aap.2025.108209" target="_blank">10.1016/j.aap.2025.108209</a></div>
-                </div>
-
-                <div class="pub-item">
-                    <div class="pub-authors">Nguyen-Phuoc, D.Q.*, Pham, S.T*, Nguyen, T.P.T., Su, D.N., Luu, T.T. & Oviedo-Trespalacios, O.</div>
-                    <div class="pub-title">Exploring the switch to urban train services: the impact of perceived accessibility and its moderating effects</div>
-                    <div class="pub-journal">Transportation Research Part A: Policy and Practice (Q1, A*)</div>
-                    <div class="pub-details">Vol 191, 104320, 2025</div>
-                    <div class="pub-doi">DOI: <a href="https://doi.org/10.1016/j.tra.2024.104320" target="_blank">10.1016/j.tra.2024.104320</a></div>
-                </div>
-
-                <div class="pub-item">
-                    <div class="pub-authors">Nguyen-Phuoc, D.Q.*, Mai, N.X. & Oviedo-Trespalacios, O.</div>
-                    <div class="pub-title">Not the Same: How Delivery, Ride-Hailing, and Private Riders’ Roles Influence Safety Behavior</div>
-                    <div class="pub-journal">Accident Analysis & Prevention (Q1, A*)</div>
-                    <div class="pub-details">Vol 208, 107762, 2024</div>
-                    <div class="pub-doi">DOI: <a href="https://doi.org/10.1016/j.aap.2024.107762" target="_blank">10.1016/j.aap.2024.107762</a></div>
-                </div>
-
-                <div class="pub-item">
-                    <div class="pub-authors">Nguyen-Phuoc, D.Q.*, Mai, N.X., Kim, I. & Oviedo-Trespalacios, O.</div>
-                    <div class="pub-title">Questioning Penalties and Road Safety Policies: Are They Enough to Deter Risky Two-Wheeler Behavior?</div>
-                    <div class="pub-journal">Accident Analysis & Prevention (Q1, A*)</div>
-                    <div class="pub-details">Vol 207, 107756, 2024</div>
-                    <div class="pub-doi">DOI: <a href="https://doi.org/10.1016/j.aap.2024.107756" target="_blank">10.1016/j.aap.2024.107756</a></div>
-                </div>
-
-                <div class="pub-item">
-                    <div class="pub-authors">Nguyen-Phuoc, D.Q., Zhou, M., Chua, M. H., Alho, A. R.*, Oh, S.*, Seshadri, R., Le, D. T.</div>
-                    <div class="pub-title">Examining the effects of Automated Mobility-on-Demand services on public transport systems using an agent-based simulation approach</div>
-                    <div class="pub-journal">Transportation Research Part A: Policy and Practice (Q1, A*)</div>
-                    <div class="pub-details">Vol 169, 103583, 2023</div>
-                    <div class="pub-doi">DOI: <a href="https://doi.org/10.1016/j.tra.2023.103583" target="_blank">10.1016/j.tra.2023.103583</a></div>
-                </div>
-
-                <div class="pub-item">
-                    <div class="pub-authors">Nguyen-Phuoc, D.Q.*, Ly, Su, D.N., Nguyen, H.H. & Oviedo-Trespalacios, O.</div>
-                    <div class="pub-title">Deadly meals: The influence of job-related factors on burnout and risky riding behaviours of food delivery motorcyclists</div>
-                    <div class="pub-journal">Safety Science (Q1, A)</div>
-                    <div class="pub-details">Vol 159, 106007, 2023</div>
-                    <div class="pub-doi">DOI: <a href="https://doi.org/10.1016/j.ssci.2022.106007" target="_blank">10.1016/j.ssci.2022.106007</a></div>
-                </div>
-
-                <div class="pub-item">
-                    <div class="pub-authors">Nguyen-Phuoc, D.Q.*, Nguyen, T.V., Su, D.N., Le, P. T. & Oviedo-Trespalacios, O.</div>
-                    <div class="pub-title">How social cues about other passengers affect word-of-mouth and intention to continue using bus services? A second-order SEM approach</div>
-                    <div class="pub-journal">Transportation Research Part A: Policy and Practice (Q1, A*)</div>
-                    <div class="pub-details">Vol 158, pp. 302–320, 2022</div>
-                    <div class="pub-doi">DOI: <a href="https://doi.org/10.1016/j.tra.2022.02.009" target="_blank">10.1016/j.tra.2022.02.009</a></div>
-                </div>
-
-                <div class="pub-item">
-                    <div class="pub-authors">Nguyen-Phuoc, D.Q.*, Su, D.N., Vo, N.S., Nguyen, H.H. & Oviedo-Trespalacios, O.</div>
-                    <div class="pub-title">Factors affecting intention to use on-demand shared ride-hailing services in Vietnam: Risk, cost or sustainability?</div>
-                    <div class="pub-journal">Journal of Transport Geography (Q1, A)</div>
-                    <div class="pub-details">Vol 99, 103302, 2022</div>
-                    <div class="pub-doi">DOI: <a href="https://doi.org/10.1016/j.jtrangeo.2022.103302" target="_blank">10.1016/j.jtrangeo.2022.103302</a></div>
-                </div>
-
-                <div class="pub-item">
-                    <div class="pub-authors">Nguyen-Phuoc, D.Q.*, Oviedo-Trespalacios, O., Vo, N.S., Le, P. T. & Nguyen, T. V.</div>
-                    <div class="pub-title">How does perceived risk affect passenger satisfaction and loyalty towards ride sourcing services?</div>
-                    <div class="pub-journal">Transportation Research Part D: Transport and Environment (Q1, A)</div>
-                    <div class="pub-details">Vol 97, 102921, 2021</div>
-                    <div class="pub-doi">DOI: <a href="https://doi.org/10.1016/j.trd.2021.102921" target="_blank">10.1016/j.trd.2021.102921</a></div>
-                </div>
-
-                <div class="pub-item">
-                    <div class="pub-authors">Nguyen-Phuoc, D.Q.*, Tran, A.T.P., Nguyen, T.V., Le, P.T. & Su, D.N.</div>
-                    <div class="pub-title">Investigating the complexity of perceived service quality and perceived safety and security in building loyalty among bus passengers in Vietnam – A PLS-SEM approach</div>
-                    <div class="pub-journal">Transport Policy (Q1, A)</div>
-                    <div class="pub-details">Vol 101, pp. 162–173, 2021</div>
-                    <div class="pub-doi">DOI: <a href="https://doi.org/10.1016/j.tranpol.2020.12.010" target="_blank">10.1016/j.tranpol.2020.12.010</a></div>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- Contact -->
-        <section id="contact" class="cta" data-aos="fade-up">
-            <h2>Let's Collaborate</h2>
-            <p style="font-size:1.5rem; max-width:900px; margin:36px auto;">
-                Research collaboration • PhD co-supervision • Grant applications • Industry consulting
-            </p>
-            <a href="mailto:duy.npq@vinuni.edu.vn" class="btn">Contact Me</a>
-        </section>
-
+  <!-- Navigation -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <div class="nav-brand">
+        <a href="https://vinuni.edu.vn" target="_blank" rel="noopener noreferrer">
+          <img src="https://npqduy.github.io/Trường_Đại_học_VinUni_logo.png" alt="VinUniversity logo">
+        </a>
+      </div>
+      <div class="nav-menu">
+        <a href="#biography">Biography</a>
+        <a href="#research-interests">Research Interests</a>
+        <a href="#research-experience">Research Experience</a>
+        <a href="#education">Education</a>
+        <a href="#publications">Selected Publications</a>
+        <a href="#awards">Awards &amp; Honors</a>
+        <a href="#grants">Research Grants and Funding</a>
+        <a href="#professional-experience">Professional Experience</a>
+        <a href="#research-skills">Research Skills and Training</a>
+        <a href="#engagements">Engagements &amp; Services</a>
+        <a href="#affiliations">Professional Affiliations</a>
+      </div>
     </div>
+  </nav>
 
-    <footer>
-        <p>© 2025 Dr. Nguyen Phuoc Quy Duy • Associate Professor, VinUniversity • All rights reserved.</p>
-    </footer>
+  <!-- Hero -->
+  <header>
+    <div class="hero-wrapper">
+      <div class="hero-content container" data-aos="fade-up">
+        <h1>Nguyen Phuoc Quy Duy, PhD</h1>
+        <p class="title">Associate Professor</p>
+        <p>College of Engineering and Computer Science<br>VinUniversity, Vietnam</p>
+        <div class="hero-meta">
+          Sustainability · Energy · Urban Innovation · Transportation
+        </div>
+        <p class="hero-email">duy.npq@vinuni.edu.vn</p>
+      </div>
+    </div>
+  </header>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init({duration:1000,once:true});
-        window.addEventListener('scroll',()=>{let c='';document.querySelectorAll('section[id]').forEach(s=>{if(scrollY>=s.offsetTop-160)c=s.id;});document.querySelectorAll('.nav-menu a').forEach(a=>{a.classList.remove('active');if(a.getAttribute('href')===`#${c}`)a.classList.add('active');});});
-    </script>
+  <div class="container">
+
+    <!-- Biography -->
+    <section id="biography" data-aos="fade-up">
+      <h2 class="section-title">Biography</h2>
+      <div class="glass-card">
+        <div class="bio-grid">
+          <div class="bio-photo">
+            <img src="https://npqduy.github.io/anh_thay_duy_github.png"
+                 alt="Dr. Nguyen Phuoc Quy Duy">
+          </div>
+          <div class="bio-text">
+            <p>
+              Dr. Nguyen Phuoc Quy Duy is currently an <strong>Associate Professor</strong> at the College of Engineering and Computer Science,
+              <span class="institution">VinUniversity, Vietnam</span>. He earned his Ph.D. from
+              <span class="institution">Monash University, Australia</span> in 2018 and subsequently worked as a Postdoctoral Researcher at the
+              <span class="institution">Singapore – MIT Alliance for Research and Technology (SMART), Singapore</span>.
+            </p>
+            <p>
+              His research interests include sustainable mobility, travel behaviour, urban innovation, transport modelling, traffic safety,
+              and transport economics. He has published <strong>65+ peer-reviewed Q1 papers</strong> with an <strong>h-index of 34</strong> and over
+              <strong>3,000 citations</strong>. He leads the <strong>Sustainable Travel and Economic Behaviour Research Group (STEB-RG)</strong>
+              and serves on editorial boards of leading journals such as <em>Travel Behaviour and Society</em> and
+              <em>Transportation Research Part F</em>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Research Interests -->
+    <section id="research-interests" data-aos="fade-up">
+      <h2 class="section-title">Research Interests</h2>
+      <div class="section-intro">
+        Core research areas spanning sustainable urban mobility, human travel behaviour, transport systems innovation and safety.
+      </div>
+      <div class="glass-card">
+        <div class="interests-grid">
+          <div class="interest-card">
+            <i class="fas fa-bicycle"></i>
+            <h3>Sustainable Mobility</h3>
+          </div>
+          <div class="interest-card">
+            <i class="fas fa-route"></i>
+            <h3>Travel Behaviour</h3>
+          </div>
+          <div class="interest-card">
+            <i class="fas fa-city"></i>
+            <h3>Urban Innovation</h3>
+          </div>
+          <div class="interest-card">
+            <i class="fas fa-chart-line"></i>
+            <h3>Transport Economics</h3>
+          </div>
+          <div class="interest-card">
+            <i class="fas fa-shield-alt"></i>
+            <h3>Traffic Safety</h3>
+          </div>
+          <div class="interest-card">
+            <i class="fas fa-project-diagram"></i>
+            <h3>Traffic Modelling</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Research Experience -->
+    <section id="research-experience" data-aos="fade-up">
+      <h2 class="section-title">Research Experience</h2>
+      <div class="glass-card">
+        <div class="timeline">
+
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-year">2025 – Current</div>
+              <p><strong>Associate Professor</strong></p>
+              <p><span class="institution">VinUniversity, Vietnam</span></p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-year">2021 – Current</div>
+              <p><strong>Leader, Sustainable Travel and Economic Behaviour Research Group (STEB-RG)</strong></p>
+              <p><span class="institution">The University of Danang, Vietnam</span></p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-year">2018 – 2020</div>
+              <p><strong>Postdoctoral Associate</strong></p>
+              <p>Project: Studying Autonomous Vehicles Policies with Urban Planning of Toa Payoh</p>
+              <p><span class="institution">Singapore – MIT Alliance for Research and Technology (SMART), Singapore</span></p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-year">2018 – 2019</div>
+              <p><strong>Research Affiliate</strong></p>
+              <p>Project: Factors affecting the loyalty of ride-hailing passengers</p>
+              <p><span class="institution">Ton Duc Thang University, Ho Chi Minh City, Vietnam</span></p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-year">2018</div>
+              <p><strong>Research Leader</strong></p>
+              <p>Projects: Assessing app-based taxi service &amp; taxi driver behavior vs. accidents</p>
+              <p><span class="institution">The University of Danang – University of Science and Technology, Vietnam</span></p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-year">2017</div>
+              <p><strong>Research Assistant</strong></p>
+              <p>Project: Sweating the Asset – Modelling and Analysis</p>
+              <p><span class="institution">Monash University, Australia</span></p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education" data-aos="fade-up">
+      <h2 class="section-title">Education</h2>
+      <div class="glass-card">
+        <div class="subheading">Academic Qualifications</div>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-year">2018</div>
+              <p><strong>PhD in Transportation</strong></p>
+              <p><strong>Thesis:</strong> Improving methods to estimate the traffic congestion impacts of urban public transport</p>
+              <p><strong>Supervisors:</strong> Prof Graham Currie, Prof William Young and Dr Chris De Gruyter</p>
+              <p><span class="institution">Monash University, Australia</span></p>
+              <p>(#36 QS ranking 2026)</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-year">2010</div>
+              <p><strong>Master in Civil Engineering</strong></p>
+              <p><strong>Thesis:</strong> A study on application of accelerometer in measuring the degree of compaction</p>
+              <p><strong>Supervisor:</strong> Prof Kim Byung Ill</p>
+              <p><span class="institution">Myongji University, Korea</span></p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-year">2005</div>
+              <p><strong>Degree of Engineering in Civil Engineering</strong></p>
+              <p>Certificate in Bridge and Road Engineering</p>
+              <p><span class="institution">The University of Danang - University of Science and Technology, Vietnam</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Selected Publications -->
+    <section id="publications" data-aos="fade-up">
+      <h2 class="section-title">Selected Publications</h2>
+
+      <div class="glass-card">
+        <div class="subheading">Publications Overview</div>
+        <p class="pub-intro">
+          Recognized in the <strong>Stanford/Elsevier Top 2% Scientists List (2025)</strong> in Logistics &amp; Transportation, with
+          <strong>65+ peer-reviewed Q1 publications</strong>, <strong>3,000+ citations</strong>, and an <strong>h-index of 34</strong>
+          (Google Scholar, Nov 2025), including:
+        </p>
+        <div class="pub-metrics">
+          <ul>
+            <li><strong>60%</strong> of publications are in the <strong>top 10%</strong> of the most cited globally</li>
+            <li><strong>80%</strong> of articles are in <strong>top 10%</strong> journals by CiteScore</li>
+            <li><strong>80%</strong> of publications are A*/A-ranked journal articles</li>
+            <li><strong>80%</strong> of articles authored as a first/corresponding author</li>
+            <li>
+              Nguyen-Phuoc, D.Q. was recognized as one of the two most influential authors with substantial local impact in motorcycle studies,
+              according to an independent Asian review conducted in 2024
+              (<a href="https://doi.org/10.1016/j.iatssr.2024.01.005" target="_blank" rel="noopener noreferrer nofollow">IATSS Research 2024</a>).
+            </li>
+            <li>Achieved a Field-Weighted Citation Impact of <strong>3.0</strong>, indicating citations 3 times above the global average</li>
+            <li>
+              Nguyen-Phuoc was honored to be invited as the sole keynote speaker for the plenary session of the
+              <strong>13th International Conference on Transport Survey Methods (ISCTSC2025)</strong>
+            </li>
+            <li>
+              Based on Scopus data, nearly <strong>80%</strong> of the publications are aligned with
+              <strong>Sustainable Development Goal (SDG) 11: Sustainable Cities and Communities</strong>.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="glass-card pub-list">
+        <div class="subheading">Selective Journal Articles</div>
+
+        <div class="pub-item">
+          <div class="pub-authors">
+            Nguyen-Phuoc, D.Q.*, Su, N.D., Tran, P.T.K, Le, D.T.T. &amp; Johnson, L.W., 2020
+          </div>
+          <div class="pub-title">
+            Factors influencing customer's loyalty towards ride-hailing taxi services – A case study of Vietnam
+          </div>
+          <div class="pub-journal">
+            Transportation Research Part A: Policy and Practice (Q1, A*)
+          </div>
+          <div class="pub-details">
+            Vol. 134, pp. 96–112.
+          </div>
+          <div class="pub-note">
+            <strong><em>Top 2 most cited paper in Transportation Research Part A: Policy and Practice (Q1, A*) (2022–2023).</em></strong>
+          </div>
+          <div class="pub-doi">
+            DOI: <a href="https://doi.org/10.1016/j.tra.2020.02.008" target="_blank" rel="noopener noreferrer">10.1016/j.tra.2020.02.008</a>
+          </div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-authors">
+            Su, D.N., Nguyen-Phuoc, D.Q.* &amp; Johnson, L.W., 2019
+          </div>
+          <div class="pub-title">
+            The effects of perceived safety, perceived service quality, involvement and satisfaction on loyalty intention among ride-sourcing passengers
+          </div>
+          <div class="pub-journal">
+            Transportation (Q1, A)
+          </div>
+          <div class="pub-details">
+            Vol. 48, pp. 369–393.
+          </div>
+          <div class="pub-note">
+            <strong><em>Top 5 most cited paper in Transportation (Q1, A) (2022–2023).</em></strong>
+          </div>
+          <div class="pub-doi">
+            DOI: <a href="https://doi.org/10.1007/s11116-019-10058-y" target="_blank" rel="noopener noreferrer">10.1007/s11116-019-10058-y</a>
+          </div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-authors">
+            Nguyen, H.H., Nguyen-Phuoc, D.Q.*, Oviedo-Trespalacios, O., 2023
+          </div>
+          <div class="pub-title">
+            Non-fatal traffic crashes among food delivery riders in Vietnam: What is the problem?
+          </div>
+          <div class="pub-journal">
+            Traffic Injury Prevention (Q1)
+          </div>
+          <div class="pub-details">
+            Vol. 24(8), pp. 686–692.
+          </div>
+          <div class="pub-note">
+            <strong><em>Top 2 most cited paper in Traffic Injury Prevention (Q1) (2025–current).</em></strong>
+          </div>
+          <div class="pub-doi">
+            DOI: <a href="https://doi.org/10.1080/15389588.2023.2238862" target="_blank" rel="noopener noreferrer">10.1080/15389588.2023.2238862</a>
+          </div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-authors">
+            Nguyen-Phuoc, D.Q.*, Nguyen, T.V., Su, D.N., Le, P. T. &amp; Oviedo-Trespalacios, O., 2022
+          </div>
+          <div class="pub-title">
+            How social cues about other passengers affect word-of-mouth and intention to continue using bus services? A second-order SEM approach
+          </div>
+          <div class="pub-journal">
+            Transportation Research Part A: Policy and Practice (Q1, A*)
+          </div>
+          <div class="pub-details">
+            Vol. 158, pp. 302–320.
+          </div>
+          <div class="pub-note">
+            <strong><em>Top 3 most popular paper in Transportation Research Part A: Policy and Practice (Q1, A*) (2022–current).</em></strong>
+          </div>
+          <div class="pub-doi">
+            DOI: <a href="https://doi.org/10.1016/j.tra.2022.02.009" target="_blank" rel="noopener noreferrer">10.1016/j.tra.2022.02.009</a>
+          </div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-authors">
+            Nguyen-Phuoc, D.Q., Zhou, M., Chua, M. H., Alho, A. R.*, Oh, S.*, Seshadri, R., Le, D. T., 2023
+          </div>
+          <div class="pub-title">
+            Examining the effects of Automated Mobility-on-Demand services on public transport systems using an agent-based simulation approach
+          </div>
+          <div class="pub-journal">
+            Transportation Research Part A: Policy and Practice (Q1, A*)
+          </div>
+          <div class="pub-details">
+            Vol. 169, 103583.
+          </div>
+          <div class="pub-note">
+            <strong><em>Top 5 most popular paper in Transportation Research Part A: Policy and Practice (Q1, A*) (2022–current).</em></strong>
+          </div>
+          <div class="pub-doi">
+            DOI: <a href="https://doi.org/10.1016/j.tra.2023.103583" target="_blank" rel="noopener noreferrer">10.1016/j.tra.2023.103583</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Awards & Honors -->
+    <section id="awards" data-aos="fade-up">
+      <h2 class="section-title">Awards &amp; Honors</h2>
+
+      <div class="glass-card">
+        <div class="subheading">Awards</div>
+        <div class="timeline">
+          <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-content"><div class="timeline-year">2025</div><p>Outstanding Research Performance Award, Danang Department of Science and Technology, Danang city, Vietnam</p></div></div>
+          <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-content"><div class="timeline-year">2024</div><p>Winner, Outstanding Research Performance Award, the University of Danang, Vietnam</p></div></div>
+          <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-content"><div class="timeline-year">2024</div><p>Grand Prize, Outstanding Research Performance Award, the University of Danang - University of Science and Technology, Vietnam</p></div></div>
+          <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-content"><div class="timeline-year">2024</div><p>Outstanding Research Performance Award, Danang Department of Science and Technology, Danang city, Vietnam</p></div></div>
+          <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-content"><div class="timeline-year">2023</div><p>Winner, Outstanding Research Performance Award, the University of Danang, Vietnam</p></div></div>
+          <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-content"><div class="timeline-year">2023</div><p>Winner, Outstanding Research Performance Award, the University of Danang - University of Science and Technology, Vietnam</p></div></div>
+          <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-content"><div class="timeline-year">2023</div><p>Outstanding Research Performance Award, Danang Department of Science and Technology, Danang city, Vietnam</p></div></div>
+          <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-content"><div class="timeline-year">2022</div><p>Winner, Outstanding Research Performance Award, the University of Danang, Vietnam</p></div></div>
+          <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-content"><div class="timeline-year">2022</div><p>Outstanding Research Performance Award, Danang Department of Science and Technology, Danang city, Vietnam</p></div></div>
+          <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-content"><div class="timeline-year">2021</div><p>Winner, Outstanding Research Performance Award, the University of Danang - University of Science and Technology, Vietnam</p></div></div>
+          <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-content"><div class="timeline-year">2019</div><p>Outstanding Research Performance Award, Danang Department of Science and Technology, Vietnam</p></div></div>
+          <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-content"><div class="timeline-year">2019</div><p>SIDRA SOLUTIONS Award which is presented to the most outstanding postgraduate student from a tertiary institution in Australia or New Zealand, Australia (includes a plaque and $2,500 cash prize)</p></div></div>
+          <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-content"><div class="timeline-year">2018</div><p>Runner-up, Outstanding Research Performance Award, the University of Danang - University of Science and Technology, Vietnam</p></div></div>
+          <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-content"><div class="timeline-year">2018</div><p>Outstanding Research Performance Award, Danang Department of Science and Technology, Vietnam</p></div></div>
+          <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-content"><div class="timeline-year">2011</div><p>Certificate of Lecturer Involvement in Student’s Scientific Research, the University of Science and Technology, Vietnam</p></div></div>
+          <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-content"><div class="timeline-year">2005</div><p>Runner-up, Student Scientific Research, Vietnam Ministry of Education and Training</p></div></div>
+          <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-content"><div class="timeline-year">2005</div><p>Runner-up, Vietnam Fund for Scientific and Technological Creations (VIFOTEC), Vietnam</p></div></div>
+          <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-content"><div class="timeline-year">2004</div><p>Outstanding Research Performance Award, the University of Danang - University of Science and Technology, Vietnam</p></div></div>
+        </div>
+      </div>
+
+      <div class="glass-card" style="margin-top:24px;">
+        <div class="subheading">Scholarships</div>
+        <div class="timeline">
+          <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-content"><div class="timeline-year">2014–2018</div><p>Australia Awards Scholarships (PhD)</p></div></div>
+          <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-content"><div class="timeline-year">2013–2014</div><p>RMIT English Language Programs from AusAID</p></div></div>
+          <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-content"><div class="timeline-year">2008–2010</div><p>Brain Korea 21 (Master)</p></div></div>
+          <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-content"><div class="timeline-year">2006–2007</div><p>VEF English Language Training Scholarship for the Winner in VIFOTEC Award</p></div></div>
+          <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-content"><div class="timeline-year">2000–2005</div><p>University of Science and Technology Scholarship for Outstanding Undergraduate Student</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Research Grants and Funding -->
+    <section id="grants" data-aos="fade-up">
+      <h2 class="section-title">Research Grants and Funding</h2>
+      <div class="glass-card">
+        <div class="timeline">
+          <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-content"><div class="timeline-year">2023</div><p>Vietnam National Foundation for Science and Technology Development (NAFOSTED), USD40,000 (PI)</p></div></div>
+          <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-content"><div class="timeline-year">2023</div><p>The Science and Technology Development of the University of Danang, USD9,000 (with Xuan My)</p></div></div>
+          <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-content"><div class="timeline-year">2021</div><p>The Science and Technology Development of the University of Danang, USD9,000 (PI)</p></div></div>
+          <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-content"><div class="timeline-year">2021</div><p>Danang University of Technology Research Grant, USD2,000 (PI)</p></div></div>
+          <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-content"><div class="timeline-year">2020</div><p>The Science and Technology Development of the University of Danang, USD10,000 (with Diep Su, DUE)</p></div></div>
+          <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-content"><div class="timeline-year">2020</div><p>The Science and Technology Development of the University of Danang, USD10,000 (with Anh Tran, DUT)</p></div></div>
+          <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-content"><div class="timeline-year">2018</div><p>Danang University of Technology Research Grant, USD2,000 (with Anh Tran, DUT)</p></div></div>
+          <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-content"><div class="timeline-year">2017</div><p>VICROADS Research Project Funding, AUD40,000 (with Hai Vu and Long Truong, Monash University)</p></div></div>
+          <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-content"><div class="timeline-year">2017</div><p>Monash University International Conference Travel Grant, AUD2,100</p></div></div>
+          <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-content"><div class="timeline-year">2017</div><p>Australia Awards Scholarships International Conference Travel Grant, AUD3,000</p></div></div>
+          <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-content"><div class="timeline-year">2017</div><p>Institute of Transport Studies Conference Travel Grant, AUD1,000</p></div></div>
+          <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-content"><div class="timeline-year">2016</div><p>Public Transport Research Group Grant for conducting Quantitative Research, AUD15,000</p></div></div>
+          <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-content"><div class="timeline-year">2016</div><p>Public Transport Research Group Grant for conducting Qualitative Research, AUD900</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Professional Experience -->
+    <section id="professional-experience" data-aos="fade-up">
+      <h2 class="section-title">Professional Experience</h2>
+
+      <div class="glass-card">
+        <div class="subheading">Academic Appointments</div>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-year">2025–Current</div>
+              <p><strong>Associate Professor - <span class="institution">VinUniversity, Vietnam</span></strong></p>
+              <p><strong>Courses:</strong></p>
+              <ul>
+                <li>CECS1050: Introduction to Data Literacy</li>
+              </ul>
+              <p><strong>Responsibility:</strong></p>
+              <ul>
+                <li>Prepare course materials, lectures for undergrad &amp; graduate levels</li>
+                <li>Supervise projects, thesis, dissertations (Masters, PhD)</li>
+                <li>Lead research (as PI), obtain grants, plan, conduct</li>
+                <li>Participate in departmental and university committees</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-year">2010–2025</div>
+              <p><strong>Senior Lecturer - <span class="institution">The University of Danang - University of Science and Technology, Vietnam</span></strong></p>
+              <p><strong>Courses:</strong></p>
+              <ul>
+                <li>CIV1001: Highway Geometry Design</li>
+                <li>CIV2015: Traffic Management</li>
+                <li>CIV2011: Analysis of Urban Road Network</li>
+                <li>CIV2112: Research Methodology</li>
+              </ul>
+              <p><strong>Responsibility:</strong></p>
+              <ul>
+                <li>For planning, coordinating and implementing the teaching</li>
+                <li>For necessary preparations in the university’s digital learning management system</li>
+                <li>For following up with students in their practice period</li>
+                <li>For carrying out student evaluation of the course in accordance with the quality system</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-year">2014–2017</div>
+              <p><strong>Head Tutor/ Tutor - <span class="institution">Monash University, Australia</span></strong></p>
+              <p><strong>Courses:</strong></p>
+              <ul>
+                <li>CIV3283: Road Engineering</li>
+                <li>CIV3204: Engineering Investigation</li>
+                <li>ENG1021: Spatial Communication in Engineering</li>
+                <li>CIV3205: Project Management for Civil Engineers</li>
+              </ul>
+              <p><strong>Responsibility:</strong></p>
+              <ul>
+                <li>For necessary preparations in tutorial classes</li>
+                <li>For following up supporting students in their practice period and tutorial classes</li>
+                <li>For marking the students’ examination</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="glass-card" style="margin-top:24px;">
+        <div class="subheading">PhD Supervisions</div>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-year">2022–2025</div>
+              <p><strong>Pham Truong Son (Principal Supervisor)</strong></p>
+              <p>Thesis topic: Factors influencing the use of urban rail transport in major cities in Vietnam and propose solutions to increase ridership</p>
+              <p><strong>Mai Xuan Nhat (Principal Supervisor)</strong></p>
+              <p>Thesis topic: Factors influencing traffic accidents involving among motorcyclists in the major urban areas of Vietnam</p>
+              <p><span class="institution">The University of Danang - University of Science and Technology, Vietnam</span></p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-year">2024–2026</div>
+              <p><strong>Suwarna A/P Subramaniam (Co-supervisor)</strong></p>
+              <p>Thesis topic: Models of risk riding behavior among p-haling riders in Malaysia</p>
+              <p><span class="institution">The National University of Malaysia, Malaysia</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Research Skills and Training -->
+    <section id="research-skills" data-aos="fade-up">
+      <h2 class="section-title">Research Skills and Training</h2>
+
+      <div class="glass-card">
+        <div class="subheading">Skills Summary</div>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <p><strong>Language proficiency</strong></p>
+              <ul>
+                <li>English</li>
+                <li>Vietnamese (native)</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <p><strong>Computing skills</strong></p>
+
+              <div class="skill-group">
+                <div class="skill-label">
+                  Advanced proficiency in traffic modelling (<strong>CUBE</strong>, <strong>VISSIM</strong>, <strong>SimMobility</strong>)
+                </div>
+                <div class="skill-bar"><div class="skill-bar-fill" style="width:93%;"></div></div>
+              </div>
+
+              <div class="skill-group">
+                <div class="skill-label">
+                  Advanced proficiency in Geographic Information System (<strong>ArcGIS</strong>, <strong>QGIS</strong>)
+                </div>
+                <div class="skill-bar"><div class="skill-bar-fill" style="width:90%;"></div></div>
+              </div>
+
+              <div class="skill-group">
+                <div class="skill-label">
+                  Advanced proficiency in <strong>AutoCAD</strong>, <strong>Tableau</strong>
+                </div>
+                <div class="skill-bar"><div class="skill-bar-fill" style="width:88%;"></div></div>
+              </div>
+
+              <div class="skill-group">
+                <div class="skill-label">
+                  Advanced proficiency in databasing language (<strong>SQL</strong>)
+                </div>
+                <div class="skill-bar"><div class="skill-bar-fill" style="width:85%;"></div></div>
+              </div>
+
+              <div class="skill-group">
+                <div class="skill-label">
+                  Good command of <strong>SmartPLS</strong>, <strong>STATA</strong>, <strong>NLOGIT</strong>, <strong>SPSS</strong>
+                </div>
+                <div class="skill-bar"><div class="skill-bar-fill" style="width:80%;"></div></div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="glass-card" style="margin-top:24px;">
+        <div class="subheading">Research Training</div>
+        <div class="timeline">
+          <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-content"><div class="timeline-year">2015</div><p>Advanced Scripting Techniques with CUBE Voyager, Melbourne</p></div></div>
+          <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-content"><div class="timeline-year">2015</div><p>Modelling using VISSIM, PTV Melbourne</p></div></div>
+          <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-content"><div class="timeline-year">2015</div><p>Academic Writing and Publishing Workshops, Monash University</p></div></div>
+          <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-content"><div class="timeline-year">2015</div><p>Writing your Research Paper Workshops, Monash University</p></div></div>
+          <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-content"><div class="timeline-year">2014</div><p>Devising Effective Slides for your Presentation Workshops, Monash University</p></div></div>
+          <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-content"><div class="timeline-year">2014</div><p>Grammar for Editing your Research Writing Workshops, Monash University</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Engagements & Services -->
+    <section id="engagements" data-aos="fade-up">
+      <h2 class="section-title">Engagements &amp; Services</h2>
+
+      <div class="glass-card">
+        <div class="subheading">Academic Services</div>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-year">2026–Current</div>
+              <p><strong>Editor Board Member</strong></p>
+              <p><span class="institution">Transportation Research Part F: Traffic Psychology and Behaviour</span> (Elsevier, SSCI, Q1, h-index = 118)</p>
+              <p><span class="institution">Research in Transportation Business &amp; Management</span> (Elsevier, SSCI, Q1, h-index = 57)</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-year">2024–Current</div>
+              <p><strong>Editor Board Member</strong></p>
+              <p><span class="institution">Travel Behaviour and Society</span> (Elsevier, SSCI, Q1, h-index = 56)</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-year">2021–Current</div>
+              <p><strong>Journal Associate Editor</strong></p>
+              <p><span class="institution">Frontiers in Future Transportation, Transport Safety</span> (Scopus Q2, ESCI)</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-year">2015–Current</div>
+              <p><strong>Ad hoc reviewer</strong></p>
+              <p><strong>Journals:</strong></p>
+              <ul>
+                <li>Transportation Research Part A: Policy and Practice</li>
+                <li>Transportation Research Part D: Transport and Environment</li>
+                <li>Transportation Research Part F: Traffic Psychology and Behaviour</li>
+                <li>Accident Analysis &amp; Prevention</li>
+                <li>Safety Science</li>
+                <li>Transport Review</li>
+                <li>Cities</li>
+                <li>Transport Policy</li>
+                <li>Travel Behaviour and Society</li>
+                <li>Journal of Transport Geography</li>
+                <li>Transportation</li>
+                <li>Research in Transportation Business &amp; Management</li>
+                <li>Public Transport</li>
+                <li>Transportation Research Record: Journal of the Transportation Research Board</li>
+              </ul>
+              <p><strong>Conferences:</strong></p>
+              <ul>
+                <li>Transportation Research Board (TRB)</li>
+                <li>World Conference on Transport Research (WCTR)</li>
+                <li>World Congress on Intelligent Transport System (ITS)</li>
+                <li>Australasian Transport Research Forum (ATRF)</li>
+                <li>Conference on Transport Infrastructure with Sustainable Development (TISDC)</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-year">2025</div>
+              <p><strong>Keynote speaker</strong></p>
+              <p>13th International Conference on Transport Survey Methods (ISCTSC2025)</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-year">2023</div>
+              <p><strong>Conference Managing Editor, Session Chair</strong></p>
+              <p>4st International Conference on Transport Infrastructure and Sustainable Development (TISDIC), Vietnam (<a href="https://tisdic2023.dut.udn.vn/" target="_blank" rel="noopener noreferrer">https://tisdic2023.dut.udn.vn/</a>)</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-year">2019</div>
+              <p><strong>Conference Managing Editor, Invited Speaker</strong></p>
+              <p>3st International Conference on Transport Infrastructure and Sustainable Development (TISDIC), Vietnam</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-year">2016</div>
+              <p><strong>Conference Managing Editor</strong></p>
+              <p>2st National Conference on Transport Infrastructure and Sustainable Development (TISDC), Vietnam</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-year">2013</div>
+              <p><strong>Conference Managing Editor</strong></p>
+              <p>1st National Conference on Transport Infrastructure and Sustainable Development (TISDC), Vietnam</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Professional Affiliations -->
+    <section id="affiliations" data-aos="fade-up">
+      <h2 class="section-title">Professional Affiliations</h2>
+      <div class="glass-card">
+        <div class="timeline">
+          <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-content"><div class="timeline-year">2024–Current</div><p>Member, American Psychological Association (APA)</p></div></div>
+          <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-content"><div class="timeline-year">2021–Current</div><p>Leader, Sustainable Travel and Economic Behaviour Research Group (STEB-RG)</p></div></div>
+          <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-content"><div class="timeline-year">2018–Current</div><p>Member, Institute of Transportation Engineers (ITE)</p></div></div>
+          <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-content"><div class="timeline-year">2017–Current</div><p>Co-Founder, Civil Engineering Research &amp; Training Group (CERT), the University of Danang - University of Science and Technology, Vietnam</p></div></div>
+          <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-content"><div class="timeline-year">2016–Current</div><p>Member, Public Transport Research Group (PTRG), Monash University</p></div></div>
+          <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-content"><div class="timeline-year">2015–Current</div><p>Member, Australian Institute of Traffic Planning and Management (AITPM)</p></div></div>
+          <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-content"><div class="timeline-year">2010–Current</div><p>Danang Bridge and Road Association, Vietnam</p></div></div>
+        </div>
+      </div>
+
+      <!-- Contact CTA -->
+      <div id="contact" class="cta" data-aos="fade-up">
+        <h2 class="section-title">Let's Collaborate</h2>
+        <p>
+          Research collaboration · PhD co-supervision · Grant applications · Industry consulting
+        </p>
+        <a href="mailto:duy.npq@vinuni.edu.vn" class="btn">Contact Me</a>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    © 2025 Dr. Nguyen Phuoc Quy Duy · Associate Professor, VinUniversity · All rights reserved.
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true
+    });
+
+    // Active section highlight
+    window.addEventListener('scroll', () => {
+      let current = '';
+      const sections = document.querySelectorAll('section[id]');
+      const scrollY = window.scrollY;
+
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 140;
+        if (scrollY >= sectionTop) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      document.querySelectorAll('.nav-menu a').forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) {
+          link.classList.add('active');
+        }
+      });
+    });
+  </script>
 </body>
-
 </html>
-
-
-
-
-
-
-
-
