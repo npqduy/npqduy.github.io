@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dr. Nguyen Phuoc Quy Duy | Associate Professor, VinUniversity</title>
-  <meta name="description" content="Associate Professor at VinUniversity | Leader of STEB-RG | 60+ Q1 papers | h-index 34">
+  <meta name="description" content="Associate Professor at VinUniversity | Leader of STEB-RG | 65+ Q1 papers | h-index 35">
 
   <!-- Fonts & Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
@@ -149,25 +149,60 @@
     }
 
     .hero-content .title {
-      font-size: 1.5rem;
-      margin-bottom: 6px;
+      margin-bottom: 10px;
       font-weight: 500;
+    }
+
+    .hero-title-main {
+      display: block;
+      font-size: 1.7rem;
+      font-weight: 600;
+    }
+
+    .hero-title-sub {
+      display: block;
+      font-size: 1rem;
+      font-weight: 400;
+      margin-top: 2px;
     }
 
     .hero-content p {
       font-size: 1.02rem;
     }
 
-    .hero-meta {
-      margin-top: 18px;
-      font-size: 0.98rem;
-      color: #e5e7eb;
+    .hero-email {
+      margin-top: 14px;
+      font-size: 1.05rem;
+      font-weight: 500;
     }
 
-    .hero-email {
-      margin-top: 20px;
-      font-size: 1.1rem;
-      font-weight: 500;
+    .hero-links {
+      margin-top: 18px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .hero-links a {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.95rem;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(248, 250, 252, 0.5);
+      color: #e5e7eb;
+      text-decoration: none;
+    }
+
+    .hero-links a i {
+      font-size: 0.9rem;
+    }
+
+    .hero-links a:hover {
+      background: rgba(255, 255, 255, 0.16);
     }
 
     section {
@@ -444,37 +479,7 @@
       border-bottom-style: solid;
     }
 
-    /* Skill bars */
-    .skill-group {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 10px;
-      flex-wrap: wrap;
-    }
-
-    .skill-label {
-      font-size: 0.95rem;
-      margin-bottom: 0;
-      flex: 1 1 auto;
-    }
-
-    .skill-bar {
-      height: 8px;
-      border-radius: 999px;
-      background: #e2e8f0;
-      overflow: hidden;
-      flex: 0 0 180px;
-      max-width: 200px;
-    }
-
-    .skill-bar-fill {
-      height: 100%;
-      border-radius: 999px;
-      background: linear-gradient(90deg, var(--vin-blue), var(--vin-gold));
-    }
-
-    /* CTA Contact */
+    /* CTA Contact (not used separately, but kept if needed) */
     .cta {
       background: linear-gradient(135deg, var(--vin-blue), #005eb8);
       color: white;
@@ -548,14 +553,6 @@
         font-size: 2.7rem;
       }
 
-      .hero-content .title {
-        font-size: 1.25rem;
-      }
-
-      .hero-content p {
-        font-size: 0.98rem;
-      }
-
       section {
         padding: 72px 0 56px;
       }
@@ -599,17 +596,6 @@
       .interests-grid {
         grid-template-columns: 1fr;
       }
-
-      .skill-group {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .skill-bar {
-        flex: 0 0 auto;
-        width: 100%;
-        max-width: 100%;
-      }
     }
 
     @media (min-width: 900px) {
@@ -631,15 +617,11 @@
       <div class="nav-menu">
         <a href="#biography">Biography</a>
         <a href="#research-interests">Research Interests</a>
-        <a href="#research-experience">Research Experience</a>
+        <a href="#professional-experience">Professional Experience</a>
         <a href="#education">Education</a>
         <a href="#publications">Selected Publications</a>
         <a href="#awards">Awards &amp; Honors</a>
-        <a href="#grants">Research Grants and Funding</a>
-        <a href="#professional-experience">Professional Experience</a>
-        <a href="#research-skills">Research Skills and Training</a>
-        <a href="#engagements">Engagements &amp; Services</a>
-        <a href="#affiliations">Professional Affiliations</a>
+        <a href="#recruitment">Opportunities</a>
       </div>
     </div>
   </nav>
@@ -649,12 +631,22 @@
     <div class="hero-wrapper">
       <div class="hero-content container" data-aos="fade-up">
         <h1>Nguyen Phuoc Quy Duy, PhD</h1>
-        <p class="title">Associate Professor</p>
-        <p>College of Engineering and Computer Science<br>VinUniversity, Vietnam</p>
-        <div class="hero-meta">
-          Sustainability · Energy · Urban Innovation · Transportation
-        </div>
+        <p class="title">
+          <span class="hero-title-main">Associate Professor</span>
+          <span class="hero-title-sub">of Sustainability, Energy, Urban Innovation</span>
+        </p>
+        <p>College of Engineering and Computer Science, VinUniversity, Vietnam</p>
         <p class="hero-email">duy.npq@vinuni.edu.vn</p>
+        <div class="hero-links">
+          <a href="https://scholar.google.com.sg/citations?user=x7_0Y7QAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">
+            <i class="fas fa-graduation-cap"></i>
+            <span>Google Scholar</span>
+          </a>
+          <a href="https://www.researchgate.net/profile/Duy-Nguyen-Phuoc?ev=hdr_xprf" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-researchgate"></i>
+            <span>ResearchGate</span>
+          </a>
+        </div>
       </div>
     </div>
   </header>
@@ -672,17 +664,32 @@
           </div>
           <div class="bio-text">
             <p>
-              Dr. Nguyen Phuoc Quy Duy is currently an <strong>Associate Professor</strong> at the College of Engineering and Computer Science,
-              <span class="institution">VinUniversity, Vietnam</span>. He earned his Ph.D. from
-              <span class="institution">Monash University, Australia</span> in 2018 and subsequently worked as a Postdoctoral Researcher at the
-              <span class="institution">Singapore – MIT Alliance for Research and Technology (SMART), Singapore</span>.
+              Dr. Nguyen-Phuoc is currently an <strong>Associate Professor of Sustainability</strong> at the
+              <span class="institution">College of Engineering and Computer Science, VinUniversity, Vietnam</span>.
+              After earning his Ph.D. from <span class="institution">Monash University, Australia</span> in 2018, he advanced his research
+              career as a Postdoctoral Researcher at the
+              <span class="institution">Singapore – MIT Alliance Research and Technology (SMART)</span>.
+              His research spans <strong>sustainable mobility</strong>, <strong>travel behaviour</strong>, <strong>traffic safety</strong>,
+              <strong>transport modelling</strong>, and <strong>transport economics</strong>, resulting in
+              <strong>65+ publications</strong> in leading international peer-reviewed journals (WOS/Q1) and a
+              <strong>h-index of 35</strong>. Several of his papers are among the top most cited articles in top-tier A*/A journals,
+              highlighting the significant impact of his work on both theoretical advancements and practical implications in industry and
+              policy-making. Dr. Nguyen-Phuoc has been recognized in the
+              <strong>Stanford/Elsevier's Top 2% Scientists List (2025)</strong> in the field of
+              <strong>Logistics &amp; Transportation</strong>.
             </p>
             <p>
-              His research interests include sustainable mobility, travel behaviour, urban innovation, transport modelling, traffic safety,
-              and transport economics. He has published <strong>65+ peer-reviewed Q1 papers</strong> with an <strong>h-index of 34</strong> and over
-              <strong>3,000 citations</strong>. He leads the <strong>Sustainable Travel and Economic Behaviour Research Group (STEB-RG)</strong>
-              and serves on editorial boards of leading journals such as <em>Travel Behaviour and Society</em> and
-              <em>Transportation Research Part F</em>.
+              In 2019, he was awarded the prestigious <strong>Sidra Solutions Award</strong>, recognizing him as the most outstanding
+              postgraduate student from a tertiary institution in Australia or New Zealand. Furthermore, Dr. Nguyen-Phuoc has been honored
+              multiple times with the <strong>Certificate of Merit for Outstanding Researcher</strong> by the
+              <span class="institution">People’s Committee of Danang City</span>, attesting to his exceptional contributions to research.
+              An independent Asian review of motorcycle studies in 2024 also acknowledged him as
+              <strong>one of the two most influential scholars with a substantial local impact</strong> in the field. Dr. Nguyen-Phuoc was
+              honored to be invited as the <strong>sole keynote speaker</strong> for the plenary session of the
+              <strong>13th International Conference on Transport Survey Methods (ISCTSC2025)</strong>. He currently serves on the editorial
+              boards of several leading academic journals (SSCI/Q1) such as
+              <em>Travel Behaviour and Society</em> and
+              <em>Transportation Research Part F: Traffic Psychology and Behaviour</em>.
             </p>
           </div>
         </div>
@@ -725,27 +732,20 @@
       </div>
     </section>
 
-    <!-- Research Experience -->
-    <section id="research-experience" data-aos="fade-up">
-      <h2 class="section-title">Research Experience</h2>
-      <div class="glass-card">
-        <div class="timeline">
+    <!-- Professional Experience (moved up & extended) -->
+    <section id="professional-experience" data-aos="fade-up">
+      <h2 class="section-title">Professional Experience</h2>
 
+      <!-- New Experience block -->
+      <div class="glass-card">
+        <div class="subheading">Experience</div>
+        <div class="timeline">
           <div class="timeline-item">
             <div class="timeline-marker"></div>
             <div class="timeline-content">
               <div class="timeline-year">2025 – Current</div>
               <p><strong>Associate Professor</strong></p>
               <p><span class="institution">VinUniversity, Vietnam</span></p>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-marker"></div>
-            <div class="timeline-content">
-              <div class="timeline-year">2021 – Current</div>
-              <p><strong>Leader, Sustainable Travel and Economic Behaviour Research Group (STEB-RG)</strong></p>
-              <p><span class="institution">The University of Danang, Vietnam</span></p>
             </div>
           </div>
 
@@ -762,33 +762,107 @@
           <div class="timeline-item">
             <div class="timeline-marker"></div>
             <div class="timeline-content">
-              <div class="timeline-year">2018 – 2019</div>
-              <p><strong>Research Affiliate</strong></p>
-              <p>Project: Factors affecting the loyalty of ride-hailing passengers</p>
-              <p><span class="institution">Ton Duc Thang University, Ho Chi Minh City, Vietnam</span></p>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-marker"></div>
-            <div class="timeline-content">
-              <div class="timeline-year">2018</div>
-              <p><strong>Research Leader</strong></p>
-              <p>Projects: Assessing app-based taxi service &amp; taxi driver behavior vs. accidents</p>
+              <div class="timeline-year">2010 – 2025</div>
+              <p><strong>Lecturer</strong></p>
               <p><span class="institution">The University of Danang – University of Science and Technology, Vietnam</span></p>
             </div>
           </div>
+        </div>
+      </div>
+
+      <!-- Existing Academic Appointments -->
+      <div class="glass-card" style="margin-top:24px;">
+        <div class="subheading">Academic Appointments</div>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-year">2025–Current</div>
+              <p><strong>Associate Professor - <span class="institution">VinUniversity, Vietnam</span></strong></p>
+              <p><strong>Courses:</strong></p>
+              <ul>
+                <li>CECS1050: Introduction to Data Literacy</li>
+              </ul>
+              <p><strong>Responsibility:</strong></p>
+              <ul>
+                <li>Prepare course materials, lectures for undergrad &amp; graduate levels</li>
+                <li>Supervise projects, thesis, dissertations (Masters, PhD)</li>
+                <li>Lead research (as PI), obtain grants, plan, conduct</li>
+                <li>Participate in departmental and university committees</li>
+              </ul>
+            </div>
+          </div>
 
           <div class="timeline-item">
             <div class="timeline-marker"></div>
             <div class="timeline-content">
-              <div class="timeline-year">2017</div>
-              <p><strong>Research Assistant</strong></p>
-              <p>Project: Sweating the Asset – Modelling and Analysis</p>
-              <p><span class="institution">Monash University, Australia</span></p>
+              <div class="timeline-year">2010–2025</div>
+              <p><strong>Senior Lecturer - <span class="institution">The University of Danang - University of Science and Technology, Vietnam</span></strong></p>
+              <p><strong>Courses:</strong></p>
+              <ul>
+                <li>CIV1001: Highway Geometry Design</li>
+                <li>CIV2015: Traffic Management</li>
+                <li>CIV2011: Analysis of Urban Road Network</li>
+                <li>CIV2112: Research Methodology</li>
+              </ul>
+              <p><strong>Responsibility:</strong></p>
+              <ul>
+                <li>For planning, coordinating and implementing the teaching</li>
+                <li>For necessary preparations in the university’s digital learning management system</li>
+                <li>For following up with students in their practice period</li>
+                <li>For carrying out student evaluation of the course in accordance with the quality system</li>
+              </ul>
             </div>
           </div>
 
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-year">2014–2017</div>
+              <p><strong>Head Tutor/ Tutor - <span class="institution">Monash University, Australia</span></strong></p>
+              <p><strong>Courses:</strong></p>
+              <ul>
+                <li>CIV3283: Road Engineering</li>
+                <li>CIV3204: Engineering Investigation</li>
+                <li>ENG1021: Spatial Communication in Engineering</li>
+                <li>CIV3205: Project Management for Civil Engineers</li>
+              </ul>
+              <p><strong>Responsibility:</strong></p>
+              <ul>
+                <li>For necessary preparations in tutorial classes</li>
+                <li>For following up supporting students in their practice period and tutorial classes</li>
+                <li>For marking the students’ examination</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Existing PhD Supervisions -->
+      <div class="glass-card" style="margin-top:24px;">
+        <div class="subheading">PhD Supervisions</div>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-year">2022–2025</div>
+              <p><strong>Pham Truong Son (Principal Supervisor)</strong></p>
+              <p>Thesis topic: Factors influencing the use of urban rail transport in major cities in Vietnam and propose solutions to increase ridership</p>
+              <p><strong>Mai Xuan Nhat (Principal Supervisor)</strong></p>
+              <p>Thesis topic: Factors influencing traffic accidents involving among motorcyclists in the major urban areas of Vietnam</p>
+              <p><span class="institution">The University of Danang - University of Science and Technology, Vietnam</span></p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-year">2024–2026</div>
+              <p><strong>Suwarna A/P Subramaniam (Co-supervisor)</strong></p>
+              <p>Thesis topic: Models of risk riding behavior among p-haling riders in Malaysia</p>
+              <p><span class="institution">The National University of Malaysia, Malaysia</span></p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -843,7 +917,7 @@
         <div class="subheading">Publications Overview</div>
         <p class="pub-intro">
           Recognized in the <strong>Stanford/Elsevier Top 2% Scientists List (2025)</strong> in Logistics &amp; Transportation, with
-          <strong>65+ peer-reviewed Q1 publications</strong>, <strong>3,000+ citations</strong>, and an <strong>h-index of 34</strong>
+          <strong>65+ peer-reviewed Q1 publications</strong>, <strong>3,000+ citations</strong>, and an <strong>h-index of 35</strong>
           (Google Scholar, Nov 2025), including:
         </p>
         <div class="pub-metrics">
@@ -980,46 +1054,6 @@
       </div>
     </section>
 
-    <!-- Awards & Honors -->
-    <section id="awards" data-aos="fade-up">
-      <h2 class="section-title">Awards &amp; Honors</h2>
-
-      <div class="glass-card">
-        <div class="subheading">Awards</div>
-        <div class="timeline">
-          <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-content"><div class="timeline-year">2025</div><p>Outstanding Research Performance Award, Danang Department of Science and Technology, Danang city, Vietnam</p></div></div>
-          <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-content"><div class="timeline-year">2024</div><p>Winner, Outstanding Research Performance Award, the University of Danang, Vietnam</p></div></div>
-          <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-content"><div class="timeline-year">2024</div><p>Grand Prize, Outstanding Research Performance Award, the University of Danang - University of Science and Technology, Vietnam</p></div></div>
-          <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-content"><div class="timeline-year">2024</div><p>Outstanding Research Performance Award, Danang Department of Science and Technology, Danang city, Vietnam</p></div></div>
-          <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-content"><div class="timeline-year">2023</div><p>Winner, Outstanding Research Performance Award, the University of Danang, Vietnam</p></div></div>
-          <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-content"><div class="timeline-year">2023</div><p>Winner, Outstanding Research Performance Award, the University of Danang - University of Science and Technology, Vietnam</p></div></div>
-          <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-content"><div class="timeline-year">2023</div><p>Outstanding Research Performance Award, Danang Department of Science and Technology, Danang city, Vietnam</p></div></div>
-          <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-content"><div class="timeline-year">2022</div><p>Winner, Outstanding Research Performance Award, the University of Danang, Vietnam</p></div></div>
-          <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-content"><div class="timeline-year">2022</div><p>Outstanding Research Performance Award, Danang Department of Science and Technology, Danang city, Vietnam</p></div></div>
-          <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-content"><div class="timeline-year">2021</div><p>Winner, Outstanding Research Performance Award, the University of Danang - University of Science and Technology, Vietnam</p></div></div>
-          <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-content"><div class="timeline-year">2019</div><p>Outstanding Research Performance Award, Danang Department of Science and Technology, Vietnam</p></div></div>
-          <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-content"><div class="timeline-year">2019</div><p>SIDRA SOLUTIONS Award which is presented to the most outstanding postgraduate student from a tertiary institution in Australia or New Zealand, Australia (includes a plaque and $2,500 cash prize)</p></div></div>
-          <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-content"><div class="timeline-year">2018</div><p>Runner-up, Outstanding Research Performance Award, the University of Danang - University of Science and Technology, Vietnam</p></div></div>
-          <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-content"><div class="timeline-year">2018</div><p>Outstanding Research Performance Award, Danang Department of Science and Technology, Vietnam</p></div></div>
-          <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-content"><div class="timeline-year">2011</div><p>Certificate of Lecturer Involvement in Student’s Scientific Research, the University of Science and Technology, Vietnam</p></div></div>
-          <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-content"><div class="timeline-year">2005</div><p>Runner-up, Student Scientific Research, Vietnam Ministry of Education and Training</p></div></div>
-          <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-content"><div class="timeline-year">2005</div><p>Runner-up, Vietnam Fund for Scientific and Technological Creations (VIFOTEC), Vietnam</p></div></div>
-          <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-content"><div class="timeline-year">2004</div><p>Outstanding Research Performance Award, the University of Danang - University of Science and Technology, Vietnam</p></div></div>
-        </div>
-      </div>
-
-      <div class="glass-card" style="margin-top:24px;">
-        <div class="subheading">Scholarships</div>
-        <div class="timeline">
-          <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-content"><div class="timeline-year">2014–2018</div><p>Australia Awards Scholarships (PhD)</p></div></div>
-          <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-content"><div class="timeline-year">2013–2014</div><p>RMIT English Language Programs from AusAID</p></div></div>
-          <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-content"><div class="timeline-year">2008–2010</div><p>Brain Korea 21 (Master)</p></div></div>
-          <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-content"><div class="timeline-year">2006–2007</div><p>VEF English Language Training Scholarship for the Winner in VIFOTEC Award</p></div></div>
-          <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-content"><div class="timeline-year">2000–2005</div><p>University of Science and Technology Scholarship for Outstanding Undergraduate Student</p></div></div>
-        </div>
-      </div>
-    </section>
-
     <!-- Research Grants and Funding -->
     <section id="grants" data-aos="fade-up">
       <h2 class="section-title">Research Grants and Funding</h2>
@@ -1042,182 +1076,44 @@
       </div>
     </section>
 
-    <!-- Professional Experience -->
-    <section id="professional-experience" data-aos="fade-up">
-      <h2 class="section-title">Professional Experience</h2>
-
+    <!-- Awards & Honors (moved below Grants & rewritten) -->
+    <section id="awards" data-aos="fade-up">
+      <h2 class="section-title">Awards &amp; Honors</h2>
       <div class="glass-card">
-        <div class="subheading">Academic Appointments</div>
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="timeline-marker"></div>
-            <div class="timeline-content">
-              <div class="timeline-year">2025–Current</div>
-              <p><strong>Associate Professor - <span class="institution">VinUniversity, Vietnam</span></strong></p>
-              <p><strong>Courses:</strong></p>
-              <ul>
-                <li>CECS1050: Introduction to Data Literacy</li>
-              </ul>
-              <p><strong>Responsibility:</strong></p>
-              <ul>
-                <li>Prepare course materials, lectures for undergrad &amp; graduate levels</li>
-                <li>Supervise projects, thesis, dissertations (Masters, PhD)</li>
-                <li>Lead research (as PI), obtain grants, plan, conduct</li>
-                <li>Participate in departmental and university committees</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-marker"></div>
-            <div class="timeline-content">
-              <div class="timeline-year">2010–2025</div>
-              <p><strong>Senior Lecturer - <span class="institution">The University of Danang - University of Science and Technology, Vietnam</span></strong></p>
-              <p><strong>Courses:</strong></p>
-              <ul>
-                <li>CIV1001: Highway Geometry Design</li>
-                <li>CIV2015: Traffic Management</li>
-                <li>CIV2011: Analysis of Urban Road Network</li>
-                <li>CIV2112: Research Methodology</li>
-              </ul>
-              <p><strong>Responsibility:</strong></p>
-              <ul>
-                <li>For planning, coordinating and implementing the teaching</li>
-                <li>For necessary preparations in the university’s digital learning management system</li>
-                <li>For following up with students in their practice period</li>
-                <li>For carrying out student evaluation of the course in accordance with the quality system</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-marker"></div>
-            <div class="timeline-content">
-              <div class="timeline-year">2014–2017</div>
-              <p><strong>Head Tutor/ Tutor - <span class="institution">Monash University, Australia</span></strong></p>
-              <p><strong>Courses:</strong></p>
-              <ul>
-                <li>CIV3283: Road Engineering</li>
-                <li>CIV3204: Engineering Investigation</li>
-                <li>ENG1021: Spatial Communication in Engineering</li>
-                <li>CIV3205: Project Management for Civil Engineers</li>
-              </ul>
-              <p><strong>Responsibility:</strong></p>
-              <ul>
-                <li>For necessary preparations in tutorial classes</li>
-                <li>For following up supporting students in their practice period and tutorial classes</li>
-                <li>For marking the students’ examination</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="glass-card" style="margin-top:24px;">
-        <div class="subheading">PhD Supervisions</div>
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="timeline-marker"></div>
-            <div class="timeline-content">
-              <div class="timeline-year">2022–2025</div>
-              <p><strong>Pham Truong Son (Principal Supervisor)</strong></p>
-              <p>Thesis topic: Factors influencing the use of urban rail transport in major cities in Vietnam and propose solutions to increase ridership</p>
-              <p><strong>Mai Xuan Nhat (Principal Supervisor)</strong></p>
-              <p>Thesis topic: Factors influencing traffic accidents involving among motorcyclists in the major urban areas of Vietnam</p>
-              <p><span class="institution">The University of Danang - University of Science and Technology, Vietnam</span></p>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-marker"></div>
-            <div class="timeline-content">
-              <div class="timeline-year">2024–2026</div>
-              <p><strong>Suwarna A/P Subramaniam (Co-supervisor)</strong></p>
-              <p>Thesis topic: Models of risk riding behavior among p-haling riders in Malaysia</p>
-              <p><span class="institution">The National University of Malaysia, Malaysia</span></p>
-            </div>
-          </div>
-        </div>
+        <ul>
+          <li>
+            <strong>Outstanding Research Performance Award</strong>, presented by the
+            <span class="institution">People’s Committee of Danang City, Vietnam</span> in
+            <strong>2018, 2019, 2022, 2023, 2024 and 2025</strong>.
+          </li>
+          <li>
+            <strong>Winner, Outstanding Research Performance Award</strong>, presented by the
+            <span class="institution">University of Danang, Vietnam</span> in
+            <strong>2022, 2023 and 2024</strong>.
+          </li>
+          <li>
+            <strong>Grand Prize, Outstanding Research Performance Award</strong>, presented by the
+            <span class="institution">University of Danang - University of Science and Technology, Vietnam</span> in
+            <strong>2024</strong>.
+          </li>
+          <li>
+            <strong>Winner, Outstanding Research Performance Award</strong>, presented by the
+            <span class="institution">University of Science and Technology, the University of Danang, Vietnam</span> in
+            <strong>2018, 2021 and 2023</strong>.
+          </li>
+          <li>
+            <strong>Sidra Solutions Award</strong>, presented to the most outstanding postgraduate student from a tertiary institution
+            in Australia or New Zealand, <span class="institution">Australia</span> – <strong>2019</strong>.
+          </li>
+          <li>
+            <strong>Sole keynote speaker for the plenary session</strong>,
+            <span class="institution">International Conference on Transport Survey Methods (ISCTSC2025), Vietnam</span>.
+          </li>
+        </ul>
       </div>
     </section>
 
-    <!-- Research Skills and Training -->
-    <section id="research-skills" data-aos="fade-up">
-      <h2 class="section-title">Research Skills and Training</h2>
-
-      <div class="glass-card">
-        <div class="subheading">Skills Summary</div>
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="timeline-marker"></div>
-            <div class="timeline-content">
-              <p><strong>Language proficiency</strong></p>
-              <ul>
-                <li>English</li>
-                <li>Vietnamese (native)</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-marker"></div>
-            <div class="timeline-content">
-              <p><strong>Computing skills</strong></p>
-
-              <div class="skill-group">
-                <div class="skill-label">
-                  Advanced proficiency in traffic modelling (<strong>CUBE</strong>, <strong>VISSIM</strong>, <strong>SimMobility</strong>)
-                </div>
-                <div class="skill-bar"><div class="skill-bar-fill" style="width:93%;"></div></div>
-              </div>
-
-              <div class="skill-group">
-                <div class="skill-label">
-                  Advanced proficiency in Geographic Information System (<strong>ArcGIS</strong>, <strong>QGIS</strong>)
-                </div>
-                <div class="skill-bar"><div class="skill-bar-fill" style="width:90%;"></div></div>
-              </div>
-
-              <div class="skill-group">
-                <div class="skill-label">
-                  Advanced proficiency in <strong>AutoCAD</strong>, <strong>Tableau</strong>
-                </div>
-                <div class="skill-bar"><div class="skill-bar-fill" style="width:88%;"></div></div>
-              </div>
-
-              <div class="skill-group">
-                <div class="skill-label">
-                  Advanced proficiency in databasing language (<strong>SQL</strong>)
-                </div>
-                <div class="skill-bar"><div class="skill-bar-fill" style="width:85%;"></div></div>
-              </div>
-
-              <div class="skill-group">
-                <div class="skill-label">
-                  Good command of <strong>SmartPLS</strong>, <strong>STATA</strong>, <strong>NLOGIT</strong>, <strong>SPSS</strong>
-                </div>
-                <div class="skill-bar"><div class="skill-bar-fill" style="width:80%;"></div></div>
-              </div>
-
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="glass-card" style="margin-top:24px;">
-        <div class="subheading">Research Training</div>
-        <div class="timeline">
-          <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-content"><div class="timeline-year">2015</div><p>Advanced Scripting Techniques with CUBE Voyager, Melbourne</p></div></div>
-          <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-content"><div class="timeline-year">2015</div><p>Modelling using VISSIM, PTV Melbourne</p></div></div>
-          <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-content"><div class="timeline-year">2015</div><p>Academic Writing and Publishing Workshops, Monash University</p></div></div>
-          <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-content"><div class="timeline-year">2015</div><p>Writing your Research Paper Workshops, Monash University</p></div></div>
-          <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-content"><div class="timeline-year">2014</div><p>Devising Effective Slides for your Presentation Workshops, Monash University</p></div></div>
-          <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-content"><div class="timeline-year">2014</div><p>Grammar for Editing your Research Writing Workshops, Monash University</p></div></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Engagements & Services -->
+    <!-- Engagements & Services (kept as is) -->
     <section id="engagements" data-aos="fade-up">
       <h2 class="section-title">Engagements &amp; Services</h2>
 
@@ -1333,28 +1229,37 @@
       </div>
     </section>
 
-    <!-- Professional Affiliations -->
-    <section id="affiliations" data-aos="fade-up">
-      <h2 class="section-title">Professional Affiliations</h2>
+    <!-- Recruitment / Opportunities -->
+    <section id="recruitment" data-aos="fade-up">
+      <h2 class="section-title">Opportunities for Research Assistants, Master &amp; PhD Students</h2>
       <div class="glass-card">
-        <div class="timeline">
-          <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-content"><div class="timeline-year">2024–Current</div><p>Member, American Psychological Association (APA)</p></div></div>
-          <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-content"><div class="timeline-year">2021–Current</div><p>Leader, Sustainable Travel and Economic Behaviour Research Group (STEB-RG)</p></div></div>
-          <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-content"><div class="timeline-year">2018–Current</div><p>Member, Institute of Transportation Engineers (ITE)</p></div></div>
-          <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-content"><div class="timeline-year">2017–Current</div><p>Co-Founder, Civil Engineering Research &amp; Training Group (CERT), the University of Danang - University of Science and Technology, Vietnam</p></div></div>
-          <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-content"><div class="timeline-year">2016–Current</div><p>Member, Public Transport Research Group (PTRG), Monash University</p></div></div>
-          <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-content"><div class="timeline-year">2015–Current</div><p>Member, Australian Institute of Traffic Planning and Management (AITPM)</p></div></div>
-          <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-content"><div class="timeline-year">2010–Current</div><p>Danang Bridge and Road Association, Vietnam</p></div></div>
-        </div>
-      </div>
-
-      <!-- Contact CTA -->
-      <div id="contact" class="cta" data-aos="fade-up">
-        <h2 class="section-title">Let's Collaborate</h2>
         <p>
-          Research collaboration · PhD co-supervision · Grant applications · Industry consulting
+          The <strong>Sustainable Travel and Economic Behaviour Research Group (STEB-RG)</strong>, led by
+          Dr. Nguyen-Phuoc, is actively looking for highly motivated
+          <strong>Research Assistants</strong>, <strong>Master students</strong> and <strong>PhD candidates</strong> who are passionate about
+          research in:
         </p>
-        <a href="mailto:duy.npq@vinuni.edu.vn" class="btn">Contact Me</a>
+        <ul>
+          <li>Sustainable Mobility</li>
+          <li>Travel Behaviour</li>
+          <li>Urban Innovation</li>
+          <li>Transport Economics</li>
+          <li>Traffic Safety</li>
+          <li>Traffic Modelling</li>
+        </ul>
+        <p>
+          Candidates with strong quantitative skills, experience in data analysis or transport modelling, and a genuine interest in
+          sustainability and urban mobility are especially encouraged to apply. Opportunities may include participation in funded projects,
+          co-authorship of journal papers, and involvement in international research collaborations.
+        </p>
+        <p>
+          If you are interested in joining the group as a Research Assistant, Master student or PhD student, please send a short statement
+          of interest, your CV, and academic transcripts to:
+          <a href="mailto:duy.npq@vinuni.edu.vn">duy.npq@vinuni.edu.vn</a>.
+        </p>
+        <p>
+          Promising candidates will be contacted to discuss potential topics and funding options aligned with ongoing and upcoming projects.
+        </p>
       </div>
     </section>
   </div>
@@ -1393,4 +1298,3 @@
   </script>
 </body>
 </html>
-
