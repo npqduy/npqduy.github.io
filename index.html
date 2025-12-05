@@ -119,11 +119,17 @@
 
     /* Layout */
     header {
-      background:
-        linear-gradient(135deg, rgba(0, 48, 135, 0.93), rgba(0, 94, 184, 0.88)),
-        url('https://images.unsplash.com/photo-1497864149936-d3163f0c0f4b?q=80&w=2400') center/cover;
+      position: relative;
+      /* Thay 'vinuni-banner.jpg' bằng đúng đường dẫn ảnh banner của bạn nếu khác */
+      background-image:
+        linear-gradient(to bottom, rgba(15, 23, 42, 0.55), rgba(15, 23, 42, 0.18)),
+        url('https://npqduy.github.io/vin_banner.png');
+      background-position: top center;   /* giữ trọn chóp tòa nhà */
+      background-size: cover;
+      background-repeat: no-repeat;
       color: white;
-      padding: 120px 0 80px;
+      padding: 150px 0 110px;            /* đẩy khối chữ xuống dưới cho hài hòa */
+      min-height: 420px;                 /* đủ cao để ít bị cắt hình */
     }
 
     .hero-wrapper {
@@ -146,6 +152,7 @@
       font-size: 4rem;
       margin-bottom: 10px;
       line-height: 1.05;
+      text-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
     }
 
     .hero-content .title {
@@ -157,6 +164,7 @@
       display: block;
       font-size: 1.7rem;
       font-weight: 600;
+      text-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
     }
 
     .hero-title-sub {
@@ -164,10 +172,12 @@
       font-size: 1rem;
       font-weight: 400;
       margin-top: 2px;
+      text-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
     }
 
     .hero-content p {
       font-size: 1.02rem;
+      text-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
     }
 
     .hero-email {
@@ -191,10 +201,11 @@
       font-size: 0.95rem;
       padding: 6px 14px;
       border-radius: 999px;
-      background: rgba(255, 255, 255, 0.08);
-      border: 1px solid rgba(248, 250, 252, 0.5);
+      background: rgba(255, 255, 255, 0.16);
+      border: 1px solid rgba(248, 250, 252, 0.6);
       color: #e5e7eb;
       text-decoration: none;
+      backdrop-filter: blur(6px);
     }
 
     .hero-links a i {
@@ -202,7 +213,7 @@
     }
 
     .hero-links a:hover {
-      background: rgba(255, 255, 255, 0.16);
+      background: rgba(255, 255, 255, 0.24);
     }
 
     section {
@@ -546,11 +557,12 @@
       }
 
       header {
-        padding: 110px 0 60px;
+        padding: 130px 0 80px;
+        min-height: 380px;
       }
 
       .hero-content h1 {
-        font-size: 2.7rem;
+        font-size: 2.9rem;
       }
 
       section {
@@ -583,6 +595,14 @@
 
       .nav-menu a {
         font-size: 0.8rem;
+      }
+
+      header {
+        padding: 120px 0 70px;
+      }
+
+      .hero-content h1 {
+        font-size: 2.4rem;
       }
 
       .glass-card {
@@ -1203,9 +1223,6 @@
   </script>
 </body>
 </html>
-
-
-
 
 
 
